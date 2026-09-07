@@ -82,14 +82,12 @@ disables the scroll reveals. The page has no horizontal scroll at 375px.
 
 ## Deploying
 
-Configured for Vercel as a static site ([`vercel.json`](vercel.json)):
+The site is plain static files with no server requirement: `index.html`,
+`styles.css`, `app.js` and `content.json`. Serve the repo root from any static
+host — GitHub Pages, Netlify, Cloudflare Pages, S3, or nginx.
 
-```bash
-vercel login           # first time only, opens a browser
-vercel --prod
-```
-
-Or `npm run deploy`. Vercel runs `npm run build` and serves the repo root.
+`styles.css` is committed, so no build step is required on the host. If your
+host does run one, the command is `npm run build`.
 
 ---
 
@@ -101,5 +99,4 @@ content.json    ← all site copy lives here
 app.js          renders content.json into the shell
 src/input.css   design tokens + components (Tailwind source)
 styles.css      compiled output (committed)
-vercel.json     deployment config
 ```
