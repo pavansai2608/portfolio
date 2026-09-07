@@ -43,7 +43,7 @@
     mail: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-full w-full"><rect x="2" y="4" width="20" height="16" rx="2.5"/><path d="m2.5 6.5 8.4 6.1a2 2 0 0 0 2.2 0l8.4-6.1"/></svg>`,
     arrowRight: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`,
     external: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></svg>`,
-    expand: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-3.5 w-3.5"><path d="M9 3H3v6"/><path d="M3 3l7 7"/><path d="M15 21h6v-6"/><path d="M21 21l-7-7"/></svg>`,
+    expand: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><path d="M9 3H3v6"/><path d="M3 3l7 7"/><path d="M15 21h6v-6"/><path d="M21 21l-7-7"/></svg>`,
     chevronLeft: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-5 w-5"><path d="M15 18l-6-6 6-6"/></svg>`,
     chevronRight: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-5 w-5"><path d="M9 6l6 6-6 6"/></svg>`,
     close: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true" class="h-5 w-5"><path d="M6 6l12 12M18 6L6 18"/></svg>`,
@@ -113,31 +113,6 @@
         .join('')
     );
 
-    // Grid columns track the number of stats so removing one never
-    // leaves a dead cell. Full class strings keep Tailwind's scanner happy.
-    const statCols = { 1: 'sm:grid-cols-1', 2: 'sm:grid-cols-2', 3: 'sm:grid-cols-3', 4: 'sm:grid-cols-4' };
-    const statsEl = $('#hero-stats');
-    if (statsEl) {
-      statsEl.classList.remove('sm:grid-cols-3');
-      statsEl.classList.add(statCols[(hero.stats || []).length] || 'sm:grid-cols-3');
-    }
-
-    setHTML(
-      '#hero-stats',
-      (hero.stats || [])
-        .map(
-          (s) => `<div class="stat-cell px-6 py-7">
-            <dt class="label mb-3">${esc(s.label)}</dt>
-            <dd>
-              <span class="block font-mono text-4xl font-semibold tracking-tight text-amber-400 tabular" data-count="${esc(
-                s.value
-              )}">${esc(s.value)}</span>
-              <span class="mt-1.5 block text-[0.8125rem] text-bone-600">${esc(s.note)}</span>
-            </dd>
-          </div>`
-        )
-        .join('')
-    );
   }
 
   function renderAbout(about) {
@@ -492,46 +467,6 @@
     });
   }
 
-  /** Count stats up when they first scroll into view. */
-  function initCountUp() {
-    const nodes = document.querySelectorAll('[data-count]');
-    if (!nodes.length) return;
-
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced || !('IntersectionObserver' in window)) return; // final value already in the DOM
-
-    const run = (node) => {
-      const raw = node.dataset.count || '';
-      const m = raw.match(/^(\d+(?:\.\d+)?)(.*)$/);
-      if (!m) return;
-      const target = parseFloat(m[1]);
-      const suffix = m[2] || '';
-      const decimals = (m[1].split('.')[1] || '').length;
-      const dur = 900;
-      const t0 = performance.now();
-
-      const tick = (now) => {
-        const t = Math.min((now - t0) / dur, 1);
-        const eased = 1 - Math.pow(1 - t, 3);
-        node.textContent = (target * eased).toFixed(decimals) + (t === 1 ? suffix : '');
-        if (t < 1) requestAnimationFrame(tick);
-        else node.textContent = raw;
-      };
-      requestAnimationFrame(tick);
-    };
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((en) => {
-          if (en.isIntersecting) { run(en.target); io.unobserve(en.target); }
-        });
-      },
-      { threshold: 0.6 }
-    );
-    nodes.forEach((n) => io.observe(n));
-  }
-
-
   function initReveal() {
     const items = document.querySelectorAll('.reveal');
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -689,7 +624,6 @@
     initMobileMenu();
     initLightbox(content.work?.projects || []);
     initSpotlight();
-    initCountUp();
   }
 
   if (document.readyState === 'loading') {

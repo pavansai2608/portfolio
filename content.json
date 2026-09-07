@@ -20,10 +20,6 @@
       "text": "Available for internships",
       "detail": "Open to 6+ month internships"
     },
-    "stats": [
-      { "value": "3",    "label": "Production projects",  "note": "Shipped end-to-end" },
-      { "value": "6.22", "label": "CGPA",                 "note": "B.Tech CSE (DS)" }
-    ],
     "ctas": [
       { "label": "View my work",   "href": "#work",    "style": "primary" },
       { "label": "Get in touch",   "href": "#contact", "style": "ghost" }
