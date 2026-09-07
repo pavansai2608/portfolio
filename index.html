@@ -73,11 +73,10 @@
 
     <!-- ============ HERO ============ -->
     <section id="top" class="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
-      <div class="pointer-events-none absolute inset-0 grid-texture [mask-image:radial-gradient(75%_65%_at_50%_25%,black,transparent)]" aria-hidden="true"></div>
       <div class="pointer-events-none absolute inset-0 amber-glow" aria-hidden="true"></div>
       <div class="pointer-events-none absolute inset-0 mint-glow" aria-hidden="true"></div>
 
-      <div class="relative mx-auto max-w-6xl px-5 sm:px-8">
+      <div class="relative z-[1] mx-auto max-w-6xl px-5 sm:px-8">
         <div class="max-w-4xl">
           <!-- Availability badge -->
           <div id="hero-badge" class="reveal mb-8 inline-flex items-center gap-2.5 rounded-full border border-mint-500/35 bg-mint-400/[0.07] py-1.5 pr-4 pl-3"></div>
@@ -94,8 +93,9 @@
     </section>
 
     <!-- ============ ABOUT ============ -->
-    <section id="about" class="relative scroll-mt-24 border-t border-ink-800 py-20 sm:py-28">
-      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="about" class="section-band relative scroll-mt-24 overflow-hidden border-t border-ink-800 py-20 sm:py-28">
+      <div class="glow-right" aria-hidden="true"></div>
+      <div class="relative z-[1] mx-auto max-w-6xl px-5 sm:px-8">
         <div class="reveal mb-12">
           <p id="about-kicker" class="label mb-3"></p>
           <h2 id="about-heading" class="text-3xl sm:text-4xl"></h2>
@@ -125,8 +125,9 @@
     </section>
 
     <!-- ============ WORK ============ -->
-    <section id="work" class="relative scroll-mt-24 border-t border-ink-800 py-20 sm:py-28">
-      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="work" class="section-band relative scroll-mt-24 overflow-hidden border-t border-ink-800 py-20 sm:py-28">
+      <div class="glow-left" aria-hidden="true"></div>
+      <div class="relative z-[1] mx-auto max-w-6xl px-5 sm:px-8">
         <div class="reveal mb-4">
           <p id="work-kicker" class="label mb-3"></p>
           <h2 id="work-heading" class="text-3xl sm:text-4xl"></h2>
@@ -139,8 +140,9 @@
     </section>
 
     <!-- ============ STACK ============ -->
-    <section id="stack" class="relative scroll-mt-24 border-t border-ink-800 py-20 sm:py-28">
-      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="stack" class="section-band relative scroll-mt-24 overflow-hidden border-t border-ink-800 py-20 sm:py-28">
+      <div class="glow-right" aria-hidden="true"></div>
+      <div class="relative z-[1] mx-auto max-w-6xl px-5 sm:px-8">
         <div class="reveal mb-12">
           <p id="stack-kicker" class="label mb-3"></p>
           <h2 id="stack-heading" class="text-3xl sm:text-4xl"></h2>
@@ -151,11 +153,10 @@
     </section>
 
     <!-- ============ CONTACT ============ -->
-    <section id="contact" class="relative scroll-mt-24 overflow-hidden border-t border-ink-800 py-20 sm:py-28">
+    <section id="contact" class="section-band relative scroll-mt-24 overflow-hidden border-t border-ink-800 py-20 sm:py-28">
       <div class="pointer-events-none absolute inset-0 amber-glow opacity-70" aria-hidden="true"></div>
-      <div class="pointer-events-none absolute inset-0 grid-texture [mask-image:radial-gradient(70%_70%_at_50%_50%,black,transparent)]" aria-hidden="true"></div>
 
-      <div class="relative mx-auto max-w-6xl px-5 sm:px-8">
+      <div class="relative z-[1] mx-auto max-w-6xl px-5 sm:px-8">
         <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
           <div class="reveal">
             <p id="contact-kicker" class="label mb-3"></p>
@@ -173,7 +174,7 @@
   </main>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="border-t border-ink-800 py-10">
+  <footer class="section-band relative border-t border-ink-800 py-10">
     <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-5 sm:flex-row sm:items-center sm:px-8">
       <p id="footer-copy" class="font-mono text-xs text-bone-600"></p>
       <p id="footer-note" class="font-mono text-xs text-bone-600"></p>
