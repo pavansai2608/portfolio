@@ -43,6 +43,10 @@
     mail: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-full w-full"><rect x="2" y="4" width="20" height="16" rx="2.5"/><path d="m2.5 6.5 8.4 6.1a2 2 0 0 0 2.2 0l8.4-6.1"/></svg>`,
     arrowRight: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`,
     external: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></svg>`,
+    expand: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-3.5 w-3.5"><path d="M9 3H3v6"/><path d="M3 3l7 7"/><path d="M15 21h6v-6"/><path d="M21 21l-7-7"/></svg>`,
+    chevronLeft: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-5 w-5"><path d="M15 18l-6-6 6-6"/></svg>`,
+    chevronRight: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-5 w-5"><path d="M9 6l6 6-6 6"/></svg>`,
+    close: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true" class="h-5 w-5"><path d="M6 6l12 12M18 6L6 18"/></svg>`,
     code: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4"><path d="m8 17-5-5 5-5M16 7l5 5-5 5"/></svg>`
   };
 
@@ -94,7 +98,6 @@
        <span class="hidden text-xs text-bone-400 sm:inline">${esc(hero.badge?.detail)}</span>`
     );
 
-    setText('#hero-eyebrow', hero.eyebrow);
     setText('#hero-name', hero.name);
     setText('#hero-tagline', hero.tagline);
     setText('#hero-intro', hero.intro);
@@ -110,16 +113,25 @@
         .join('')
     );
 
+    // Grid columns track the number of stats so removing one never
+    // leaves a dead cell. Full class strings keep Tailwind's scanner happy.
+    const statCols = { 1: 'sm:grid-cols-1', 2: 'sm:grid-cols-2', 3: 'sm:grid-cols-3', 4: 'sm:grid-cols-4' };
+    const statsEl = $('#hero-stats');
+    if (statsEl) {
+      statsEl.classList.remove('sm:grid-cols-3');
+      statsEl.classList.add(statCols[(hero.stats || []).length] || 'sm:grid-cols-3');
+    }
+
     setHTML(
       '#hero-stats',
       (hero.stats || [])
         .map(
-          (s) => `<div class="bg-ink-950 px-6 py-7">
+          (s) => `<div class="stat-cell px-6 py-7">
             <dt class="label mb-3">${esc(s.label)}</dt>
             <dd>
-              <span class="block font-mono text-4xl font-semibold tracking-tight text-amber-400 tabular-nums">${esc(
+              <span class="block font-mono text-4xl font-semibold tracking-tight text-amber-400 tabular" data-count="${esc(
                 s.value
-              )}</span>
+              )}">${esc(s.value)}</span>
               <span class="mt-1.5 block text-[0.8125rem] text-bone-600">${esc(s.note)}</span>
             </dd>
           </div>`
@@ -151,40 +163,27 @@
     );
   }
 
-  /** Screenshot placeholder — an intentional metric panel, not a grey box. */
+  /** Clickable screenshot that opens the project's gallery in the lightbox. */
   function shotPanel(p) {
-    const host = prettyUrl(p.links?.demo) || 'localhost:8000';
-    return `<div class="shot aspect-[4/3] w-full">
-      <div class="absolute inset-0 shot-grid opacity-70" aria-hidden="true"></div>
+    const shots = p.images || [];
+    if (!shots.length) return '';
+    const first = shots[0];
+    const more = shots.length > 1 ? `${shots.length} shots` : 'Enlarge';
 
-      <div class="relative flex h-full flex-col">
-        <div class="flex items-center gap-2.5 border-b border-ink-700/80 px-4 py-3">
-          <span class="h-2.5 w-2.5 rounded-full bg-ink-600"></span>
-          <span class="h-2.5 w-2.5 rounded-full bg-ink-600"></span>
-          <span class="h-2.5 w-2.5 rounded-full bg-ink-600"></span>
-          <span class="ml-2 min-w-0 truncate rounded-md border border-ink-700 bg-ink-950/60 px-2.5 py-1 font-mono text-[0.625rem] text-bone-600">${esc(
-            host
-          )}</span>
-        </div>
-
-        <div class="flex flex-1 flex-col items-center justify-center px-6 text-center">
-          <span class="block font-mono text-5xl leading-none font-bold tracking-tight text-amber-400 tabular-nums sm:text-6xl">${esc(
-            p.metric?.value
-          )}</span>
-          <span class="mt-3 block font-mono text-[0.6875rem] tracking-[0.18em] text-bone-200 uppercase">${esc(
-            p.metric?.unit
-          )}</span>
-          <span class="mt-4 block max-w-[26ch] text-[0.8125rem] leading-snug text-bone-600">${esc(
-            p.metric?.caption
-          )}</span>
-        </div>
-
-        <div class="flex items-center justify-between border-t border-ink-700/80 px-4 py-2.5">
-          <span class="font-mono text-[0.625rem] tracking-[0.14em] text-bone-600 uppercase">Screenshot placeholder</span>
-          <span class="font-mono text-[0.625rem] text-bone-600">${esc(p.index)}</span>
-        </div>
-      </div>
-    </div>`;
+    return `<button type="button" class="shot-frame group"
+              data-lightbox="${esc(p.id)}" data-index="0"
+              aria-label="Enlarge screenshots of ${esc(p.name)}">
+      <img src="${esc(first.src)}" alt="${esc(first.alt)}"
+           loading="lazy" decoding="async"
+           width="${esc(first.w || 1600)}" height="${esc(first.h || 900)}"
+           style="aspect-ratio:${esc(first.w || 1600)}/${esc(first.h || 900)}" />
+      <span class="shot-veil">
+        <span class="shot-hint">${ICONS.expand}${esc(more)}</span>
+        <span class="font-mono text-[0.625rem] tracking-[0.14em] text-bone-400 uppercase">${esc(
+          p.index
+        )}</span>
+      </span>
+    </button>`;
   }
 
   function projectLinks(p) {
@@ -228,7 +227,7 @@
           const textOrder = flip ? 'min-w-0 lg:order-2' : 'min-w-0 lg:order-1';
           const shotOrder = flip ? 'min-w-0 lg:order-1' : 'min-w-0 lg:order-2';
 
-          return `<article class="reveal grid items-center gap-10 lg:grid-cols-2 lg:gap-14" id="${esc(
+          return `<article class="reveal surface spotlight grid items-center gap-10 p-6 sm:p-8 lg:grid-cols-2 lg:gap-14 lg:p-10" id="${esc(
             p.id
           )}">
             <div class="${textOrder}">
@@ -328,7 +327,7 @@
 
           return `<li>
             <a href="${esc(l.href)}" target="_blank" rel="noopener noreferrer"
-               class="group flex items-center gap-4 rounded-xl border border-ink-700 bg-ink-900 px-5 py-4 no-underline transition-colors duration-200 hover:border-amber-600 hover:bg-ink-850">
+               class="group spotlight flex items-center gap-4 rounded-xl border border-ink-700 bg-ink-900 px-5 py-4 no-underline transition-all duration-300 hover:-translate-y-0.5 hover:border-amber-600 hover:bg-ink-850">
               <span class="h-5 w-5 shrink-0 text-bone-200 transition-colors duration-200 group-hover:text-amber-400">${icon}</span>
               <span class="flex-1">
                 <span class="block text-sm font-semibold text-bone-50">${esc(l.label)}</span>
@@ -351,6 +350,187 @@
   }
 
   /* ---------- behaviour ---------- */
+
+  /**
+   * Screenshot lightbox.
+   * Built once, reused for every gallery. Traps focus while open,
+   * restores it on close, and supports Esc / arrow keys.
+   */
+  function initLightbox(projects) {
+    const galleries = {};
+    projects.forEach((p) => { galleries[p.id] = p.images || []; });
+
+    const triggers = Array.from(document.querySelectorAll('[data-lightbox]'));
+    if (!triggers.length) return;
+
+    const el = document.createElement('div');
+    el.className = 'lightbox hidden';
+    el.setAttribute('role', 'dialog');
+    el.setAttribute('aria-modal', 'true');
+    el.setAttribute('aria-label', 'Project screenshot viewer');
+    el.innerHTML = `
+      <div class="flex items-center justify-between gap-4 px-5 py-4 sm:px-8">
+        <p id="lb-title" class="label !text-bone-200"></p>
+        <button type="button" class="lb-btn" data-lb="close" aria-label="Close viewer">${ICONS.close}</button>
+      </div>
+      <div class="flex flex-1 items-center justify-center gap-3 px-4 sm:gap-6 sm:px-8">
+        <button type="button" class="lb-btn" data-lb="prev" aria-label="Previous screenshot">${ICONS.chevronLeft}</button>
+        <figure class="lightbox-figure">
+          <img id="lb-img" src="" alt="" />
+          <figcaption id="lb-cap" class="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-bone-400"></figcaption>
+        </figure>
+        <button type="button" class="lb-btn" data-lb="next" aria-label="Next screenshot">${ICONS.chevronRight}</button>
+      </div>
+      <div class="flex items-center justify-center gap-4 px-5 py-5">
+        <p id="lb-count" class="font-mono text-xs tracking-[0.14em] text-bone-600"></p>
+        <span class="hidden text-xs text-bone-600 sm:inline">·</span>
+        <p class="hidden font-mono text-[0.6875rem] tracking-[0.12em] text-bone-600 uppercase sm:block">Esc to close · \u2190 \u2192 to browse</p>
+      </div>`;
+    document.body.appendChild(el);
+
+    const img   = el.querySelector('#lb-img');
+    const cap   = el.querySelector('#lb-cap');
+    const count = el.querySelector('#lb-count');
+    const title = el.querySelector('#lb-title');
+    const prev  = el.querySelector('[data-lb="prev"]');
+    const next  = el.querySelector('[data-lb="next"]');
+    const closeBtn = el.querySelector('[data-lb="close"]');
+
+    let shots = [];
+    let i = 0;
+    let lastFocused = null;
+
+    const paint = () => {
+      const shot = shots[i];
+      if (!shot) return;
+      if (shot.w && shot.h) {
+        img.width = shot.w;
+        img.height = shot.h;
+        img.style.aspectRatio = `${shot.w}/${shot.h}`;
+      }
+      img.src = shot.src;
+      img.alt = shot.alt || '';
+      cap.textContent = shot.alt || '';
+      count.textContent = `${String(i + 1).padStart(2, '0')} / ${String(shots.length).padStart(2, '0')}`;
+      prev.disabled = i === 0;
+      next.disabled = i === shots.length - 1;
+      count.hidden = shots.length < 2;
+      prev.hidden = shots.length < 2;
+      next.hidden = shots.length < 2;
+    };
+
+    const open = (id, index, name, trigger) => {
+      shots = galleries[id] || [];
+      if (!shots.length) return;
+      i = Math.min(Math.max(index, 0), shots.length - 1);
+      // Track the trigger explicitly; activeElement is unreliable for
+      // programmatic clicks and for mouse clicks in some browsers.
+      lastFocused = trigger || document.activeElement;
+      title.textContent = name || '';
+      paint();
+      el.classList.remove('hidden');
+      document.body.classList.add('lb-open');
+      requestAnimationFrame(() => el.classList.add('is-open'));
+      closeBtn.focus();
+    };
+
+    const close = () => {
+      el.classList.remove('is-open');
+      document.body.classList.remove('lb-open');
+      window.setTimeout(() => {
+        el.classList.add('hidden');
+        img.src = '';
+      }, 240);
+      if (lastFocused && lastFocused.focus) lastFocused.focus();
+    };
+
+    const step = (d) => {
+      const n = i + d;
+      if (n < 0 || n >= shots.length) return;
+      i = n;
+      paint();
+    };
+
+    triggers.forEach((t) =>
+      t.addEventListener('click', () => {
+        const card = t.closest('article');
+        const name = card ? (card.querySelector('h3')?.textContent || '') : '';
+        open(t.dataset.lightbox, Number(t.dataset.index || 0), name, t);
+      })
+    );
+
+    prev.addEventListener('click', () => step(-1));
+    next.addEventListener('click', () => step(1));
+    closeBtn.addEventListener('click', close);
+    el.addEventListener('click', (e) => { if (e.target === el) close(); });
+
+    document.addEventListener('keydown', (e) => {
+      if (el.classList.contains('hidden')) return;
+      if (e.key === 'Escape') { e.preventDefault(); close(); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+      else if (e.key === 'Tab') {
+        // Keep focus inside the dialog.
+        const f = [closeBtn, prev, next].filter((b) => !b.hidden && !b.disabled);
+        if (!f.length) return;
+        const first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+  }
+
+  /** Cursor-following glow on cards. Pointer-only, skipped for touch. */
+  function initSpotlight() {
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    document.querySelectorAll('.spotlight').forEach((card) => {
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        card.style.setProperty('--my', `${e.clientY - r.top}px`);
+      });
+    });
+  }
+
+  /** Count stats up when they first scroll into view. */
+  function initCountUp() {
+    const nodes = document.querySelectorAll('[data-count]');
+    if (!nodes.length) return;
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || !('IntersectionObserver' in window)) return; // final value already in the DOM
+
+    const run = (node) => {
+      const raw = node.dataset.count || '';
+      const m = raw.match(/^(\d+(?:\.\d+)?)(.*)$/);
+      if (!m) return;
+      const target = parseFloat(m[1]);
+      const suffix = m[2] || '';
+      const decimals = (m[1].split('.')[1] || '').length;
+      const dur = 900;
+      const t0 = performance.now();
+
+      const tick = (now) => {
+        const t = Math.min((now - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        node.textContent = (target * eased).toFixed(decimals) + (t === 1 ? suffix : '');
+        if (t < 1) requestAnimationFrame(tick);
+        else node.textContent = raw;
+      };
+      requestAnimationFrame(tick);
+    };
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) { run(en.target); io.unobserve(en.target); }
+        });
+      },
+      { threshold: 0.6 }
+    );
+    nodes.forEach((n) => io.observe(n));
+  }
+
 
   function initReveal() {
     const items = document.querySelectorAll('.reveal');
@@ -507,6 +687,9 @@
     initReveal();
     initHeaderAndSpy();
     initMobileMenu();
+    initLightbox(content.work?.projects || []);
+    initSpotlight();
+    initCountUp();
   }
 
   if (document.readyState === 'loading') {

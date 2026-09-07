@@ -4,7 +4,7 @@
   "description": "Personal portfolio \u2014 Goli Pavan Sai Krishna, AI/ML Engineer",
   "scripts": {
     "build": "tailwindcss -i src/input.css -o styles.css --minify",
-    "build:dist": "npm run build && rm -rf dist && mkdir -p dist && cp index.html app.js content.json styles.css dist/",
+    "build:dist": "npm run build && rm -rf dist && mkdir -p dist && cp index.html app.js content.json styles.css dist/ && cp -R images dist/images",
     "dev": "tailwindcss -i src/input.css -o styles.css --watch",
     "serve": "python3 -m http.server 8000",
     "deploy": "vercel --prod"

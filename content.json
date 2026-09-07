@@ -13,7 +13,6 @@
   ],
 
   "hero": {
-    "eyebrow": "AI / ML Engineer",
     "name": "Goli Pavan Sai Krishna",
     "tagline": "Building measured, production-grade AI systems — from agentic RAG to MLOps forecasting.",
     "intro": "Final-year B.Tech CSE (Data Science) student who ships end-to-end systems that measure their own claims instead of asserting them.",
@@ -22,7 +21,6 @@
       "detail": "Open to 6+ month internships"
     },
     "stats": [
-      { "value": "500+", "label": "GitHub contributions", "note": "Past 12 months" },
       { "value": "3",    "label": "Production projects",  "note": "Shipped end-to-end" },
       { "value": "6.22", "label": "CGPA",                 "note": "B.Tech CSE (DS)" }
     ],
@@ -61,6 +59,12 @@
     "projects": [
       {
         "id": "bill-auditor",
+        "images": [
+          { "src": "images/bill-auditor-audit.webp", "w": 1600, "h": 909, "alt": "Bill Auditor audit summary: payable, deducted and flagged totals for a hospital bill" },
+          { "src": "images/bill-auditor-lines.webp", "w": 1600, "h": 777, "alt": "Line-by-line deduction table, each row naming the policy clause behind it" },
+          { "src": "images/bill-auditor-input.webp", "w": 1600, "h": 909, "alt": "Audit input screen: the hospital bill on the left, the policy details on the right" },
+          { "src": "images/bill-auditor-hero.webp", "w": 1600, "h": 922, "alt": "Bill Auditor landing page" }
+        ],
         "index": "01",
         "name": "Bill Auditor",
         "category": "Agentic RAG",
@@ -75,20 +79,29 @@
       },
       {
         "id": "predictive-autoscaling",
+        "images": [
+          { "src": "images/autoscaling-overview.webp", "w": 1600, "h": 1000, "alt": "Benchmark overview reporting 62% lower p99 latency against the stock autoscaler" },
+          { "src": "images/autoscaling-replay.webp", "w": 1600, "h": 1000, "alt": "Benchmark replay view with a scrubber for stepping through a run second-by-second" }
+        ],
         "index": "02",
         "name": "Predictive Autoscaling for Kubernetes",
         "category": "MLOps / Forecasting",
         "metric": { "value": "62%", "unit": "lower p99 latency", "caption": "Across 15 controlled A/B runs" },
         "headline": "Designed a predictive Kubernetes autoscaler that forecasts traffic 60 seconds ahead, cutting p99 latency by 62% against the stock autoscaler — benchmarked across 15 controlled A/B test runs.",
-        "description": "Kubernetes' built-in autoscaler reacts only after CPU has already risen, and pods take 19 seconds to become useful. This forecasts request rate 60 seconds ahead using a quantile-regression LightGBM model and provisions capacity before load arrives — then proves it with a controlled A/B benchmark, honestly publishing a scenario where the approach initially lost, and the architectural fix that turned it into a 49% win.",
-        "tech": ["Python", "LightGBM", "Kubernetes", "Prometheus", "k6", "Docker", "FastAPI", "Streamlit"],
+        "description": "Kubernetes' built-in autoscaler reacts only after CPU has already risen, and pods take 19 seconds to become useful. This forecasts request rate 60 seconds ahead using a quantile-regression LightGBM model and provisions capacity before load arrives — then proves it with a controlled A/B benchmark, honestly publishing a scenario where the approach initially lost, and the architectural fix that turned it into a 49% win. Published as an interactive report where every benchmark run can be scrubbed through second-by-second, so the claims can be checked rather than taken on trust.",
+        "tech": ["Python", "LightGBM", "Kubernetes", "Prometheus", "k6", "Docker", "FastAPI", "Next.js", "TypeScript", "Vercel", "Streamlit"],
         "links": {
           "github": "https://github.com/pavansai2608/predictive-autoscaling.git",
-          "demo": "https://predictive-autoscaling.streamlit.app/"
+          "demo": "https://predictive-autoscaling.vercel.app"
         }
       },
       {
         "id": "customer-segmentation-retention",
+        "images": [
+          { "src": "images/segmentation-retain.webp", "w": 1600, "h": 777, "alt": "Ranked retention list showing churn risk, predicted lifetime value and action per customer" },
+          { "src": "images/segmentation-score.webp", "w": 1600, "h": 909, "alt": "Live scoring form returning churn probability and a recommended action" },
+          { "src": "images/segmentation-lookup.webp", "w": 1600, "h": 909, "alt": "Customer lookup re-scoring an existing customer against the trained models" }
+        ],
         "index": "03",
         "name": "Customer Segmentation & Retention",
         "category": "ML Pipeline / Analytics",
@@ -111,8 +124,8 @@
       { "name": "Languages", "items": ["Python", "TypeScript", "JavaScript", "SQL", "Java", "C"] },
       { "name": "Backend",   "items": ["FastAPI", "Pydantic", "REST APIs", "PostgreSQL", "Redis", "Uvicorn"] },
       { "name": "ML / Data", "items": ["PyTorch", "scikit-learn", "XGBoost", "LightGBM", "LangGraph", "LangChain", "ChromaDB", "sentence-transformers", "pandas", "NumPy", "MLflow", "DVC"] },
-      { "name": "Frontend",  "items": ["React", "TypeScript", "Tailwind CSS", "Vite", "Streamlit"] },
-      { "name": "DevOps",    "items": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Prometheus", "Grafana", "k6", "Linux", "Git"] }
+      { "name": "Frontend",  "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Streamlit"] },
+      { "name": "DevOps",    "items": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Prometheus", "Grafana", "k6", "Vercel", "Linux", "Git"] }
     ]
   },
 
