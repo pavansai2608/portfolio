@@ -132,10 +132,10 @@
       },
       {
         "label": "LinkedIn",
-        "handle": "Coming soon",
-        "href": "",
+        "handle": "linkedin.com/in/pavan-sai-b5a557291",
+        "href": "https://www.linkedin.com/in/pavan-sai-b5a557291/",
         "icon": "linkedin",
-        "available": false
+        "available": true
       }
     ]
   },
