@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Goli Pavan Sai Krishna — AI/ML Engineer</title>
+  <meta name="description" content="Final-year B.Tech CSE (Data Science) student building measured, production-grade AI systems — agentic RAG, MLOps forecasting, and customer analytics." />
+  <meta name="author" content="Goli Pavan Sai Krishna" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Goli Pavan Sai Krishna — AI/ML Engineer" />
+  <meta property="og:description" content="Building measured, production-grade AI systems — from agentic RAG to MLOps forecasting." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B0A09'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='%23F2A03D' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="antialiased">
+
+  <!-- Skip link -->
+  <a href="#main"
+     class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-amber-400 focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-ink-950">
+    Skip to content
+  </a>
+
+  <!-- Scroll progress -->
+  <div class="fixed top-0 left-0 z-50 h-0.5 w-full bg-transparent" aria-hidden="true">
+    <div id="scroll-progress" class="h-full w-0 origin-left bg-amber-400 transition-[width] duration-100 ease-linear"></div>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header id="site-header"
+          class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-all duration-300">
+    <nav class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:px-8"
+         aria-label="Primary">
+      <a href="#top"
+         class="group -ml-1 flex min-h-[44px] items-center gap-2.5 px-1 text-sm font-semibold tracking-tight text-bone-50 no-underline">
+        <span class="flex h-7 w-7 items-center justify-center rounded-md border border-ink-600 bg-ink-900 font-mono text-xs font-bold text-amber-400 transition-colors duration-200 group-hover:border-amber-600">P</span>
+        <span class="hidden sm:inline">Pavan Sai Krishna</span>
+      </a>
+
+      <ul id="nav-links" class="hidden items-center gap-7 md:flex" role="list"></ul>
+
+      <a id="nav-cta" href="#contact" class="btn btn-primary hidden !min-h-[38px] !px-4 !text-[13px] md:inline-flex">
+        Hire me
+      </a>
+
+      <button id="nav-toggle" type="button"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-ink-600 text-bone-200 transition-colors duration-200 hover:border-bone-600 md:hidden"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="icon-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg id="icon-close" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden border-t border-ink-700 bg-ink-950/98 backdrop-blur-xl md:hidden">
+      <ul id="mobile-nav-links" class="mx-auto max-w-6xl px-5 py-3 sm:px-8" role="list"></ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section id="top" class="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
+      <div class="pointer-events-none absolute inset-0 grid-texture [mask-image:radial-gradient(75%_65%_at_50%_25%,black,transparent)]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-0 amber-glow" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-0 mint-glow" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="max-w-4xl">
+          <!-- Availability badge -->
+          <div id="hero-badge" class="reveal mb-8 inline-flex items-center gap-2.5 rounded-full border border-mint-500/35 bg-mint-400/[0.07] py-1.5 pr-4 pl-3"></div>
+
+          <p id="hero-eyebrow" class="reveal label mb-4" style="--reveal-delay:60ms"></p>
+
+          <h1 id="hero-name" class="reveal mb-6 text-[2.75rem] leading-[1.02] font-bold sm:text-6xl lg:text-7xl" style="--reveal-delay:110ms"></h1>
+
+          <p id="hero-tagline" class="reveal mb-5 max-w-2xl font-display text-xl leading-[1.35] font-medium text-bone-200 sm:text-2xl" style="--reveal-delay:170ms"></p>
+
+          <p id="hero-intro" class="reveal mb-10 max-w-xl text-[1.0625rem] leading-relaxed text-bone-400" style="--reveal-delay:220ms"></p>
+
+          <div id="hero-ctas" class="reveal mb-16 flex flex-col gap-3 sm:flex-row sm:items-center" style="--reveal-delay:280ms"></div>
+        </div>
+
+        <!-- Stats: instrument readouts -->
+        <dl id="hero-stats" class="reveal grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-ink-700 bg-ink-700 sm:grid-cols-3" style="--reveal-delay:340ms"></dl>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="relative scroll-mt-24 border-t border-ink-800 py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="reveal mb-12">
+          <p id="about-kicker" class="label mb-3"></p>
+          <h2 id="about-heading" class="text-3xl sm:text-4xl"></h2>
+          <div class="rule mt-6"></div>
+        </div>
+
+        <div class="grid gap-12 lg:grid-cols-[1.35fr_1fr] lg:gap-16">
+          <div class="reveal">
+            <p id="about-bio" class="max-w-[62ch] text-[1.0625rem] leading-[1.75] text-bone-200 sm:text-lg"></p>
+          </div>
+
+          <!-- Education: spec sheet -->
+          <div class="reveal" style="--reveal-delay:120ms">
+            <div class="card overflow-hidden">
+              <div class="flex items-center gap-2.5 border-b border-ink-700 bg-ink-850 px-5 py-3.5">
+                <svg class="h-4 w-4 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 10L12 5 2 10l10 5 10-5z" />
+                  <path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5" />
+                </svg>
+                <span id="edu-label" class="label !text-bone-200"></span>
+              </div>
+              <dl id="edu-rows" class="divide-y divide-ink-700"></dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section id="work" class="relative scroll-mt-24 border-t border-ink-800 py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="reveal mb-4">
+          <p id="work-kicker" class="label mb-3"></p>
+          <h2 id="work-heading" class="text-3xl sm:text-4xl"></h2>
+          <div class="rule mt-6"></div>
+        </div>
+        <p id="work-note" class="reveal mb-16 max-w-xl text-sm leading-relaxed text-bone-600"></p>
+
+        <div id="projects" class="flex flex-col gap-20 sm:gap-28"></div>
+      </div>
+    </section>
+
+    <!-- ============ STACK ============ -->
+    <section id="stack" class="relative scroll-mt-24 border-t border-ink-800 py-20 sm:py-28">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="reveal mb-12">
+          <p id="stack-kicker" class="label mb-3"></p>
+          <h2 id="stack-heading" class="text-3xl sm:text-4xl"></h2>
+          <div class="rule mt-6"></div>
+        </div>
+        <div id="stack-groups" class="flex flex-col"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="relative scroll-mt-24 overflow-hidden border-t border-ink-800 py-20 sm:py-28">
+      <div class="pointer-events-none absolute inset-0 amber-glow opacity-70" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute inset-0 grid-texture [mask-image:radial-gradient(70%_70%_at_50%_50%,black,transparent)]" aria-hidden="true"></div>
+
+      <div class="relative mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
+          <div class="reveal">
+            <p id="contact-kicker" class="label mb-3"></p>
+            <h2 id="contact-heading" class="mb-6 text-3xl sm:text-5xl"></h2>
+            <p id="contact-pitch" class="mb-9 max-w-lg text-[1.0625rem] leading-relaxed text-bone-400"></p>
+            <div id="contact-cta" class="flex flex-col gap-3 sm:flex-row sm:items-center"></div>
+          </div>
+
+          <div class="reveal" style="--reveal-delay:120ms">
+            <ul id="contact-links" class="flex flex-col gap-3" role="list"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="border-t border-ink-800 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-5 sm:flex-row sm:items-center sm:px-8">
+      <p id="footer-copy" class="font-mono text-xs text-bone-600"></p>
+      <p id="footer-note" class="font-mono text-xs text-bone-600"></p>
+    </div>
+  </footer>
+
+  <!-- Content-load failure notice (file:// without a server) -->
+  <div id="load-error" class="fixed inset-0 z-[200] hidden items-center justify-center bg-ink-950 p-6">
+    <div class="card max-w-lg p-8">
+      <p class="label mb-3 !text-amber-400">Content could not load</p>
+      <h2 class="mb-4 text-2xl">Run a local server</h2>
+      <p class="mb-5 text-[0.9375rem] leading-relaxed text-bone-400">
+        This site reads all of its text from <code class="font-mono text-amber-300">content.json</code>.
+        Browsers block that file over <code class="font-mono text-amber-300">file://</code>, so start a
+        tiny local server from this folder and open the address it prints:
+      </p>
+      <pre class="mb-2 overflow-x-auto rounded-lg border border-ink-700 bg-ink-950 p-4 font-mono text-sm text-mint-300"><code>python3 -m http.server 8000</code></pre>
+      <p class="text-sm text-bone-600">Then visit <span class="font-mono text-bone-200">http://localhost:8000</span></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

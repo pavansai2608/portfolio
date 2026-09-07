@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "title": "Goli Pavan Sai Krishna — AI/ML Engineer",
+    "description": "Final-year B.Tech CSE (Data Science) student building measured, production-grade AI systems — agentic RAG, MLOps forecasting, and customer analytics.",
+    "url": "https://example.com"
+  },
+
+  "nav": [
+    { "label": "About",    "href": "#about" },
+    { "label": "Work",     "href": "#work" },
+    { "label": "Stack",    "href": "#stack" },
+    { "label": "Contact",  "href": "#contact" }
+  ],
+
+  "hero": {
+    "eyebrow": "AI / ML Engineer",
+    "name": "Goli Pavan Sai Krishna",
+    "tagline": "Building measured, production-grade AI systems — from agentic RAG to MLOps forecasting.",
+    "intro": "Final-year B.Tech CSE (Data Science) student who ships end-to-end systems that measure their own claims instead of asserting them.",
+    "badge": {
+      "text": "Available for internships",
+      "detail": "Open to 6+ month internships"
+    },
+    "stats": [
+      { "value": "500+", "label": "GitHub contributions", "note": "Past 12 months" },
+      { "value": "3",    "label": "Production projects",  "note": "Shipped end-to-end" },
+      { "value": "6.22", "label": "CGPA",                 "note": "B.Tech CSE (DS)" }
+    ],
+    "ctas": [
+      { "label": "View my work",   "href": "#work",    "style": "primary" },
+      { "label": "Get in touch",   "href": "#contact", "style": "ghost" }
+    ]
+  },
+
+  "about": {
+    "heading": "About",
+    "kicker": "The short version",
+    "bio": "I'm a final-year B.Tech CSE (Data Science) student at NIIT University, building end-to-end AI and ML systems rather than notebooks — an agentic RAG pipeline that audits insurance bills clause-by-clause with zero fabricated citations, a Kubernetes autoscaler that forecasts traffic and beats the stock autoscaler by 62% (and honestly reports where it didn't), and a customer analytics pipeline that turns raw transactions into ranked retention decisions. I care most about systems that measure their own claims instead of asserting them.",
+    "education": {
+      "label": "Education",
+      "degree": "B.Tech, Computer Science & Engineering",
+      "specialization": "Data Science",
+      "institution": "NIIT University",
+      "duration": "2023 — 2027",
+      "year": "4th year",
+      "cgpa": "6.22",
+      "rows": [
+        { "key": "Degree",       "value": "B.Tech CSE (Data Science)" },
+        { "key": "Institution",  "value": "NIIT University" },
+        { "key": "Duration",     "value": "2023 — 2027" },
+        { "key": "Current year", "value": "4th year" },
+        { "key": "CGPA",         "value": "6.22" }
+      ]
+    }
+  },
+
+  "work": {
+    "heading": "Selected work",
+    "kicker": "Three systems, measured end to end",
+    "note": "Every headline number below comes from a test suite or a controlled benchmark in the repo — not an estimate.",
+    "projects": [
+      {
+        "id": "bill-auditor",
+        "index": "01",
+        "name": "Bill Auditor",
+        "category": "Agentic RAG",
+        "metric": { "value": "492", "unit": "passing tests", "caption": "Zero fabricated clause citations" },
+        "headline": "Built an agentic RAG system that audits hospital bills against insurance policy documents line-by-line — zero fabricated clause citations across every test run, validated by 492 passing tests.",
+        "description": "Reads a hospital bill against the policy meant to pay it, checking each line against the insurer's actual policy document and citing the exact clause behind every deduction. Uses LangGraph agentic orchestration with hybrid dense+lexical retrieval (ChromaDB + BM25), cross-encoder reranking, and a strict rule that the LLM never does arithmetic — only Python does, so numbers stay verifiable.",
+        "tech": ["Python", "LangGraph", "LangChain", "FastAPI", "Pydantic", "ChromaDB", "BM25", "sentence-transformers", "Groq", "Ollama", "React", "TypeScript", "Docker", "Kubernetes", "Jenkins"],
+        "links": {
+          "github": "https://github.com/pavansai2608/bill-auditor.git",
+          "demo": "https://pavansai2608.github.io/bill-auditor/"
+        }
+      },
+      {
+        "id": "predictive-autoscaling",
+        "index": "02",
+        "name": "Predictive Autoscaling for Kubernetes",
+        "category": "MLOps / Forecasting",
+        "metric": { "value": "62%", "unit": "lower p99 latency", "caption": "Across 15 controlled A/B runs" },
+        "headline": "Designed a predictive Kubernetes autoscaler that forecasts traffic 60 seconds ahead, cutting p99 latency by 62% against the stock autoscaler — benchmarked across 15 controlled A/B test runs.",
+        "description": "Kubernetes' built-in autoscaler reacts only after CPU has already risen, and pods take 19 seconds to become useful. This forecasts request rate 60 seconds ahead using a quantile-regression LightGBM model and provisions capacity before load arrives — then proves it with a controlled A/B benchmark, honestly publishing a scenario where the approach initially lost, and the architectural fix that turned it into a 49% win.",
+        "tech": ["Python", "LightGBM", "Kubernetes", "Prometheus", "k6", "Docker", "FastAPI", "Streamlit"],
+        "links": {
+          "github": "https://github.com/pavansai2608/predictive-autoscaling.git",
+          "demo": "https://predictive-autoscaling.streamlit.app/"
+        }
+      },
+      {
+        "id": "customer-segmentation-retention",
+        "index": "03",
+        "name": "Customer Segmentation & Retention",
+        "category": "ML Pipeline / Analytics",
+        "metric": { "value": "540K+", "unit": "transactions", "caption": "229 high-value customers flagged" },
+        "headline": "Developed a customer segmentation and churn prediction pipeline processing 540K+ transactions into ranked retention actions, flagging 229 high-value customers worth £16.5K in predicted revenue.",
+        "description": "Combines a value estimate (BG/NBD + Gamma-Gamma for 90-day predicted lifetime value) with a risk estimate (XGBoost churn prediction, 0.78 ROC-AUC) rather than using either alone, crossing them into a four-quadrant action matrix so a retention analyst gets a ranked, justified call list instead of a raw model score. Served via FastAPI backend and React dashboard.",
+        "tech": ["Python", "XGBoost", "K-Means", "BG/NBD", "Gamma-Gamma", "FastAPI", "React", "MLflow", "DVC", "DagsHub", "Jenkins"],
+        "links": {
+          "github": "https://github.com/pavansai2608/customer-segmentation-retention.git",
+          "demo": "https://customer-segmentation-retention-1-x35i.onrender.com/"
+        }
+      }
+    ]
+  },
+
+  "stack": {
+    "heading": "Tech stack",
+    "kicker": "What I build with",
+    "groups": [
+      { "name": "Languages", "items": ["Python", "TypeScript", "JavaScript", "SQL", "Java", "C"] },
+      { "name": "Backend",   "items": ["FastAPI", "Pydantic", "REST APIs", "PostgreSQL", "Redis", "Uvicorn"] },
+      { "name": "ML / Data", "items": ["PyTorch", "scikit-learn", "XGBoost", "LightGBM", "LangGraph", "LangChain", "ChromaDB", "sentence-transformers", "pandas", "NumPy", "MLflow", "DVC"] },
+      { "name": "Frontend",  "items": ["React", "TypeScript", "Tailwind CSS", "Vite", "Streamlit"] },
+      { "name": "DevOps",    "items": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Prometheus", "Grafana", "k6", "Linux", "Git"] }
+    ]
+  },
+
+  "contact": {
+    "heading": "Get in touch",
+    "kicker": "Open to opportunities",
+    "pitch": "I'm looking for a 6+ month internship where I can ship AI/ML systems end to end. If that sounds like your team, I'd love to talk.",
+    "email": "golipavansaikrishna2608@gmail.com",
+    "emailCta": "Send an Email",
+    "links": [
+      {
+        "label": "GitHub",
+        "handle": "github.com/pavansai2608",
+        "href": "https://github.com/pavansai2608",
+        "icon": "github",
+        "available": true
+      },
+      {
+        "label": "LinkedIn",
+        "handle": "Coming soon",
+        "href": "",
+        "icon": "linkedin",
+        "available": false
+      }
+    ]
+  },
+
+  "footer": {
+    "note": "Built from scratch — HTML, Tailwind CSS, vanilla JS. No template.",
+    "copyright": "Goli Pavan Sai Krishna"
+  }
+}

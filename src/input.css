@@ -1,0 +1,320 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN SYSTEM — "Instrument"
+   Warm graphite ground + signal amber + verified mint.
+   Original palette; no third-party template.
+   ============================================================ */
+@theme {
+  /* — Ground: warm near-black, not blue-slate — */
+  --color-ink-950: #0B0A09;
+  --color-ink-900: #100E0D;
+  --color-ink-850: #151312;
+  --color-ink-800: #1B1917;
+  --color-ink-700: #24211E;
+  --color-ink-600: #2E2A26;
+  --color-ink-500: #3D3833;
+
+  /* — Type on ground — */
+  --color-bone-50:  #F4EFE8;
+  --color-bone-200: #D6CFC5;
+  --color-bone-400: #A8A096;
+  --color-bone-600: #8A8279;
+
+  /* — Signal amber: primary accent / instrument readout — */
+  --color-amber-300: #F7C078;
+  --color-amber-400: #F2A03D;
+  --color-amber-500: #E08A22;
+  --color-amber-600: #B96D14;
+
+  /* — Verified mint: secondary, used for "measured / passing" — */
+  --color-mint-300: #8FE3C1;
+  --color-mint-400: #62D3A4;
+  --color-mint-500: #3EA57C;
+
+  /* — Type stacks — */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* — Motion — */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink-950);
+    color: var(--color-bone-50);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-amber-400);
+    color: var(--color-ink-950);
+  }
+
+  /* Visible, on-brand focus ring — never removed. */
+  :focus-visible {
+    outline: 2px solid var(--color-amber-400);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+}
+
+/* ============================================================
+   COMPONENTS
+   ============================================================ */
+@layer components {
+
+  /* — Micro-label: mono, uppercase, tracked out — */
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-bone-600);
+  }
+
+  /* — Section heading rule — */
+  .rule {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      var(--color-ink-600) 0%,
+      var(--color-ink-600) 30%,
+      transparent 100%
+    );
+  }
+
+  /* — Buttons — */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0 1.5rem;
+    border-radius: 8px;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 200ms var(--ease-out-expo),
+                border-color 200ms var(--ease-out-expo),
+                color 200ms var(--ease-out-expo),
+                transform 200ms var(--ease-out-expo);
+  }
+  .btn:active { transform: translateY(1px); }
+
+  .btn-primary {
+    background-color: var(--color-amber-400);
+    color: var(--color-ink-950);
+    border: 1px solid var(--color-amber-400);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-amber-300);
+    border-color: var(--color-amber-300);
+  }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--color-bone-50);
+    border: 1px solid var(--color-ink-600);
+  }
+  .btn-ghost:hover {
+    border-color: var(--color-bone-600);
+    background-color: var(--color-ink-850);
+  }
+
+  .btn-disabled {
+    background-color: transparent;
+    color: var(--color-bone-600);
+    border: 1px dashed var(--color-ink-600);
+    cursor: not-allowed;
+  }
+
+  /* — Tech chip — */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3125rem 0.625rem;
+    border: 1px solid var(--color-ink-600);
+    border-radius: 6px;
+    background-color: var(--color-ink-900);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-bone-200);
+    white-space: nowrap;
+    transition: border-color 180ms var(--ease-out-expo),
+                color 180ms var(--ease-out-expo);
+  }
+  .chip:hover {
+    border-color: var(--color-amber-600);
+    color: var(--color-amber-300);
+  }
+
+  /* — Surface card — */
+  .card {
+    background-color: var(--color-ink-900);
+    border: 1px solid var(--color-ink-700);
+    border-radius: 14px;
+  }
+
+  /* — Backdrop textures — */
+  .grid-texture {
+    background-image:
+      linear-gradient(to right, rgba(244, 239, 232, 0.028) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(244, 239, 232, 0.028) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .amber-glow {
+    background: radial-gradient(
+      60% 55% at 18% 0%,
+      rgba(242, 160, 61, 0.14) 0%,
+      rgba(242, 160, 61, 0.05) 38%,
+      transparent 72%
+    );
+  }
+
+  .mint-glow {
+    background: radial-gradient(
+      50% 60% at 85% 40%,
+      rgba(98, 211, 164, 0.08) 0%,
+      transparent 70%
+    );
+  }
+
+  /* — Live availability dot — */
+  .pulse-dot {
+    position: relative;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 9999px;
+    background-color: var(--color-mint-400);
+    flex-shrink: 0;
+  }
+  .pulse-dot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background-color: var(--color-mint-400);
+    animation: ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  @keyframes ping {
+    0%   { transform: scale(1);   opacity: 0.7; }
+    75%, 100% { transform: scale(2.6); opacity: 0; }
+  }
+
+  /* — Scroll reveal —
+     The hidden state is gated behind html.js, which app.js sets at boot.
+     If JS fails or is disabled, every .reveal stays fully visible. — */
+  html.js .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 620ms var(--ease-out-expo),
+                transform 620ms var(--ease-out-expo);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  html.js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* — Nav link + scroll-spy state — */
+  .nav-link {
+    position: relative;
+    padding: 0.5rem 0.125rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-bone-400);
+    text-decoration: none;
+    transition: color 180ms var(--ease-out-expo);
+  }
+  .nav-link:hover { color: var(--color-bone-50); }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1.5px;
+    background-color: var(--color-amber-400);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 240ms var(--ease-out-expo);
+  }
+  .nav-link[aria-current="true"] { color: var(--color-bone-50); }
+  .nav-link[aria-current="true"]::after { transform: scaleX(1); }
+
+  /* — Project screenshot placeholder panel — */
+  .shot {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-ink-700);
+    border-radius: 14px;
+    background:
+      radial-gradient(120% 90% at 20% 0%, rgba(242, 160, 61, 0.16) 0%, transparent 60%),
+      radial-gradient(110% 90% at 90% 100%, rgba(98, 211, 164, 0.12) 0%, transparent 62%),
+      linear-gradient(160deg, var(--color-ink-850) 0%, var(--color-ink-950) 100%);
+  }
+  .shot-grid {
+    background-image:
+      linear-gradient(to right, rgba(244, 239, 232, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(244, 239, 232, 0.05) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION — render final state immediately
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  html.js .reveal { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   PRINT — reveal everything, drop decorative layers
+   ============================================================ */
+@media print {
+  html.js .reveal { opacity: 1 !important; transform: none !important; }
+  #site-header, #scroll-progress, .grid-texture, .amber-glow, .mint-glow { display: none !important; }
+}
