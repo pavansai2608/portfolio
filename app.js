@@ -138,27 +138,48 @@
     );
   }
 
-  /** Clickable screenshot that opens the project's gallery in the lightbox. */
+  /** Main screenshot plus a thumbnail strip; any of them opens the lightbox. */
   function shotPanel(p) {
     const shots = p.images || [];
     if (!shots.length) return '';
     const first = shots[0];
-    const more = shots.length > 1 ? `${shots.length} shots` : 'Enlarge';
 
-    return `<button type="button" class="shot-frame group"
-              data-lightbox="${esc(p.id)}" data-index="0"
-              aria-label="Enlarge screenshots of ${esc(p.name)}">
+    const main = `<button type="button" class="shot-frame group"
+        data-lightbox="${esc(p.id)}" data-index="0"
+        aria-label="Open screenshot 1 of ${shots.length} for ${esc(p.name)} in a larger view">
       <img src="${esc(first.src)}" alt="${esc(first.alt)}"
            loading="lazy" decoding="async"
            width="${esc(first.w || 1600)}" height="${esc(first.h || 900)}"
            style="aspect-ratio:${esc(first.w || 1600)}/${esc(first.h || 900)}" />
       <span class="shot-veil">
-        <span class="shot-hint">${ICONS.expand}${esc(more)}</span>
+        <span class="shot-hint">${ICONS.expand}Click to enlarge</span>
         <span class="font-mono text-[0.625rem] tracking-[0.14em] text-bone-400 uppercase">${esc(
           p.index
         )}</span>
       </span>
     </button>`;
+
+    // Only worth a strip when there is more than one shot to choose from.
+    const strip =
+      shots.length > 1
+        ? `<ul class="mt-3 flex gap-2" role="list">
+            ${shots
+              .map(
+                (sh, n) => `<li class="flex aspect-[16/10] flex-1 basis-0">
+                  <button type="button" class="thumb"
+                          data-lightbox="${esc(p.id)}" data-index="${n}"
+                          aria-label="Open screenshot ${n + 1} of ${shots.length} for ${esc(
+                  p.name
+                )} in a larger view">
+                    <img src="${esc(sh.src)}" alt="" loading="lazy" decoding="async" />
+                  </button>
+                </li>`
+              )
+              .join('')}
+          </ul>`
+        : '';
+
+    return `<div>${main}${strip}</div>`;
   }
 
   function projectLinks(p) {
@@ -348,24 +369,23 @@
         <p id="lb-title" class="label !text-bone-200"></p>
         <button type="button" class="lb-btn" data-lb="close" aria-label="Close viewer">${ICONS.close}</button>
       </div>
-      <div class="flex flex-1 items-center justify-center gap-3 px-4 sm:gap-6 sm:px-8">
-        <button type="button" class="lb-btn" data-lb="prev" aria-label="Previous screenshot">${ICONS.chevronLeft}</button>
+      <div class="relative flex flex-1 items-center justify-center px-3 sm:px-8">
+        <button type="button" class="lb-btn absolute top-1/2 left-2 z-10 -translate-y-1/2 sm:left-5" data-lb="prev" aria-label="Previous screenshot">${ICONS.chevronLeft}</button>
         <figure class="lightbox-figure">
           <img id="lb-img" src="" alt="" />
           <figcaption id="lb-cap" class="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-bone-400"></figcaption>
         </figure>
-        <button type="button" class="lb-btn" data-lb="next" aria-label="Next screenshot">${ICONS.chevronRight}</button>
+        <button type="button" class="lb-btn absolute top-1/2 right-2 z-10 -translate-y-1/2 sm:right-5" data-lb="next" aria-label="Next screenshot">${ICONS.chevronRight}</button>
       </div>
-      <div class="flex items-center justify-center gap-4 px-5 py-5">
-        <p id="lb-count" class="font-mono text-xs tracking-[0.14em] text-bone-600"></p>
-        <span class="hidden text-xs text-bone-600 sm:inline">·</span>
+      <div class="flex flex-col items-center gap-3 px-5 py-5">
+        <ul id="lb-dots" class="flex flex-wrap items-center justify-center gap-2" role="list"></ul>
         <p class="hidden font-mono text-[0.6875rem] tracking-[0.12em] text-bone-600 uppercase sm:block">Esc to close · \u2190 \u2192 to browse</p>
       </div>`;
     document.body.appendChild(el);
 
     const img   = el.querySelector('#lb-img');
     const cap   = el.querySelector('#lb-cap');
-    const count = el.querySelector('#lb-count');
+    const dots  = el.querySelector('#lb-dots');
     const title = el.querySelector('#lb-title');
     const prev  = el.querySelector('[data-lb="prev"]');
     const next  = el.querySelector('[data-lb="next"]');
@@ -374,6 +394,20 @@
     let shots = [];
     let i = 0;
     let lastFocused = null;
+
+    /** Numbered indicators — also clickable, so they double as navigation. */
+    const buildDots = () => {
+      dots.innerHTML = shots
+        .map(
+          (_, n) => `<li><button type="button" class="lb-dot" data-lb-dot="${n}"
+                       aria-label="Show screenshot ${n + 1} of ${shots.length}">${n + 1}</button></li>`
+        )
+        .join('');
+      dots.hidden = shots.length < 2;
+      dots.querySelectorAll('[data-lb-dot]').forEach((b) =>
+        b.addEventListener('click', () => { i = Number(b.dataset.lbDot); paint(); })
+      );
+    };
 
     const paint = () => {
       const shot = shots[i];
@@ -386,10 +420,11 @@
       img.src = shot.src;
       img.alt = shot.alt || '';
       cap.textContent = shot.alt || '';
-      count.textContent = `${String(i + 1).padStart(2, '0')} / ${String(shots.length).padStart(2, '0')}`;
+      dots.querySelectorAll('[data-lb-dot]').forEach((b) =>
+        b.setAttribute('aria-current', Number(b.dataset.lbDot) === i ? 'true' : 'false')
+      );
       prev.disabled = i === 0;
       next.disabled = i === shots.length - 1;
-      count.hidden = shots.length < 2;
       prev.hidden = shots.length < 2;
       next.hidden = shots.length < 2;
     };
@@ -402,6 +437,7 @@
       // programmatic clicks and for mouse clicks in some browsers.
       lastFocused = trigger || document.activeElement;
       title.textContent = name || '';
+      buildDots();
       paint();
       el.classList.remove('hidden');
       document.body.classList.add('lb-open');
@@ -446,7 +482,9 @@
       else if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
       else if (e.key === 'Tab') {
         // Keep focus inside the dialog.
-        const f = [closeBtn, prev, next].filter((b) => !b.hidden && !b.disabled);
+        const f = [closeBtn, prev, next, ...dots.querySelectorAll('.lb-dot')].filter(
+          (b) => !b.hidden && !b.disabled
+        );
         if (!f.length) return;
         const first = f[0], last = f[f.length - 1];
         if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
