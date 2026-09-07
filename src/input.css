@@ -1,4 +1,9 @@
-@import "tailwindcss";
+/* Scan only real markup/JS sources. Without source(none), Tailwind also scans
+   README.md and content.json prose and emits junk utilities from ordinary
+   words (e.g. the word "static" produced a .static rule). */
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../app.js";
 
 /* ============================================================
    DESIGN SYSTEM — "Instrument"
