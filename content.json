@@ -128,18 +128,17 @@
     "heading": "Tech stack",
     "kicker": "What I build with",
     "groups": [
-      { "name": "Languages", "items": ["Python", "TypeScript", "JavaScript", "SQL", "Java", "C"] },
-      { "name": "Backend",   "items": ["FastAPI", "Pydantic", "REST APIs", "PostgreSQL", "Redis", "Uvicorn"] },
-      { "name": "ML / Data", "items": ["PyTorch", "scikit-learn", "XGBoost", "LightGBM", "LangGraph", "LangChain", "ChromaDB", "sentence-transformers", "pandas", "NumPy", "MLflow", "DVC"] },
-      { "name": "Frontend",  "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Streamlit"] },
-      { "name": "DevOps",    "items": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Prometheus", "Grafana", "k6", "Vercel", "Linux", "Git"] }
+      { "name": "Languages", "items": ["Python",  "TypeScript",  "JavaScript",  "SQL"] },
+      { "name": "Backend",   "items": ["FastAPI",  "Pydantic",  "REST APIs",  "Uvicorn"] },
+      { "name": "ML / Data", "items": ["scikit-learn",  "XGBoost",  "LightGBM",  "LangGraph",  "LangChain",  "ChromaDB",  "sentence-transformers",  "pandas",  "NumPy",  "MLflow",  "DVC"] },
+      { "name": "Frontend",  "items": ["React",  "Next.js",  "TypeScript",  "Tailwind CSS",  "Vite",  "Streamlit"] },
+      { "name": "DevOps",    "items": ["Docker",  "Kubernetes",  "Jenkins",  "Prometheus",  "k6",  "Vercel",  "Linux",  "Git"] }
     ]
   },
 
   "contact": {
     "heading": "Get in touch",
     "kicker": "Open to opportunities",
-    "pitch": "I'm looking for a 6+ month internship where I can ship AI/ML systems end to end. If that sounds like your team, I'd love to talk.",
     "email": "golipavansaikrishna2608@gmail.com",
     "emailCta": "Send an Email",
     "links": [
@@ -152,8 +151,8 @@
       },
       {
         "label": "LinkedIn",
-        "handle": "linkedin.com/in/pavan-sai-b5a557291",
-        "href": "https://www.linkedin.com/in/pavan-sai-b5a557291/",
+        "handle": "linkedin.com/in/pavan-sai-krishna-goli-b5a557291",
+        "href": "https://www.linkedin.com/in/pavan-sai-krishna-goli-b5a557291/",
         "icon": "linkedin",
         "available": true
       }

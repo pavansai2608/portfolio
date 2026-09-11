@@ -69,20 +69,14 @@
 
     const mobile = items
       .map(
-        (i) => `<li>
+        (i) => `<li class="border-b border-ink-800 last:border-b-0">
           <a href="${esc(i.href)}"
-             class="flex min-h-[48px] items-center border-b border-ink-800 text-[0.9375rem] font-medium text-bone-200 no-underline transition-colors duration-200 hover:text-amber-400"
+             class="flex min-h-[48px] items-center text-[0.9375rem] font-medium text-bone-200 no-underline transition-colors duration-200 hover:text-amber-400"
              data-mobile-nav>${esc(i.label)}</a>
         </li>`
       )
       .join('');
-    setHTML(
-      '#mobile-nav-links',
-      mobile +
-        `<li class="pt-4 pb-2">
-           <a href="#contact" class="btn btn-primary w-full" data-mobile-nav>Hire me</a>
-         </li>`
-    );
+    setHTML('#mobile-nav-links', mobile);
   }
 
   function renderHero(hero) {
@@ -276,7 +270,6 @@
     if (!contact) return;
     setText('#contact-kicker', contact.kicker);
     setText('#contact-heading', contact.heading);
-    setText('#contact-pitch', contact.pitch);
 
     setHTML(
       '#contact-cta',
