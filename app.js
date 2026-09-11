@@ -88,19 +88,8 @@
   function renderHero(hero) {
     if (!hero) return;
 
-    setHTML(
-      '#hero-badge',
-      `<span class="pulse-dot" aria-hidden="true"></span>
-       <span class="font-mono text-[0.6875rem] font-medium tracking-[0.12em] text-mint-300 uppercase">${esc(
-         hero.badge?.text
-       )}</span>
-       <span class="hidden text-xs text-bone-600 sm:inline">·</span>
-       <span class="hidden text-xs text-bone-400 sm:inline">${esc(hero.badge?.detail)}</span>`
-    );
-
     setText('#hero-name', hero.name);
     setText('#hero-tagline', hero.tagline);
-    setText('#hero-intro', hero.intro);
 
     setHTML(
       '#hero-ctas',
@@ -235,13 +224,9 @@
 
               <h3 class="mb-4 text-2xl sm:text-3xl">${esc(p.name)}</h3>
 
-              <p class="mb-5 border-l-2 border-amber-500/60 pl-4 text-[1.0625rem] leading-relaxed font-medium text-bone-50">${esc(
-                p.headline
-              )}</p>
-
-              <p class="mb-6 max-w-[60ch] text-[0.9375rem] leading-[1.75] text-bone-400">${esc(
-                p.description
-              )}</p>
+              <ul class="project-bullets" role="list">
+                ${(p.bullets || []).map((b) => `<li>${esc(b)}</li>`).join('')}
+              </ul>
 
               <div class="mb-7">
                 <p class="label mb-3">Built with</p>

@@ -14,12 +14,7 @@
 
   "hero": {
     "name": "Goli Pavan Sai Krishna",
-    "tagline": "Building measured, production-grade AI systems — from agentic RAG to MLOps forecasting.",
-    "intro": "Final-year B.Tech CSE (Data Science) student who ships end-to-end systems that measure their own claims instead of asserting them.",
-    "badge": {
-      "text": "Available for internships",
-      "detail": "Open to 6+ month internships"
-    },
+    "tagline": "Building AI systems end to end — from agentic RAG to forecasting and MLOps.",
     "ctas": [
       { "label": "View my work",   "href": "#work",    "style": "primary" },
       { "label": "Get in touch",   "href": "#contact", "style": "ghost" }
@@ -65,8 +60,14 @@
         "name": "Bill Auditor",
         "category": "Agentic RAG",
         "metric": { "value": "492", "unit": "passing tests", "caption": "Zero fabricated clause citations" },
-        "headline": "Built an agentic RAG system that audits hospital bills against insurance policy documents line-by-line — zero fabricated clause citations across every test run, validated by 492 passing tests.",
-        "description": "Reads a hospital bill against the policy meant to pay it, checking each line against the insurer's actual policy document and citing the exact clause behind every deduction. Uses LangGraph agentic orchestration with hybrid dense+lexical retrieval (ChromaDB + BM25), cross-encoder reranking, and a strict rule that the LLM never does arithmetic — only Python does, so numbers stay verifiable.",
+        "bullets": [
+          "Audits hospital bills against insurance policy documents line-by-line, citing the exact clause behind every deduction",
+          "Zero fabricated clause citations across all recorded evaluation versions",
+          "Hybrid dense + lexical retrieval (ChromaDB + BM25) with cross-encoder reranking over a 399-clause index",
+          "LLM never performs arithmetic — all money math runs in Python, keeping every figure verifiable",
+          "Evaluation harness scores 328 bill lines against a hand-written answer key; accuracy threshold gates CI and blocks regressions",
+          "492 unit tests across an 8-stage Jenkins pipeline, deployed to Kubernetes"
+        ],
         "tech": ["Python", "LangGraph", "LangChain", "FastAPI", "Pydantic", "ChromaDB", "BM25", "sentence-transformers", "Groq", "Ollama", "React", "TypeScript", "Docker", "Kubernetes", "Jenkins"],
         "links": {
           "github": "https://github.com/pavansai2608/bill-auditor.git",
@@ -83,9 +84,14 @@
         "name": "Predictive Autoscaling for Kubernetes",
         "category": "MLOps / Forecasting",
         "metric": { "value": "62%", "unit": "lower p99 latency", "caption": "Across 15 controlled A/B runs" },
-        "headline": "Designed a predictive Kubernetes autoscaler that forecasts traffic 60 seconds ahead, cutting p99 latency by 62% against the stock autoscaler — benchmarked across 15 controlled A/B test runs.",
-        "description": "Kubernetes' built-in autoscaler reacts only after CPU has already risen, and pods take 19 seconds to become useful. This forecasts request rate 60 seconds ahead using a quantile-regression LightGBM model and provisions capacity before load arrives — then proves it with a controlled A/B benchmark, honestly publishing a scenario where the approach initially lost, and the architectural fix that turned it into a 49% win. Published as an interactive report where every benchmark run can be scrubbed through second-by-second, so the claims can be checked rather than taken on trust.",
-        "tech": ["Python", "LightGBM", "Kubernetes", "Prometheus", "k6", "Docker", "FastAPI", "Next.js", "TypeScript", "Vercel", "Streamlit"],
+        "bullets": [
+          "Built an autoscaler that forecasts traffic 60 seconds ahead and adds pods before the load arrives, instead of after",
+          "Cut p99 latency 62% (479 → 183 ms) vs default Kubernetes autoscaling, measured across 15 A/B runs on identical traffic",
+          "Forecast request rate with a LightGBM quantile model on 39 features, tuned to over-predict since running short costs 10x more",
+          "Fixed a 40% slowdown on traffic spikes by raising the HPA's floor instead of setting pods directly — 49% better than HPA alone",
+          "Added safety checks that rejected 22% of 975 scaling decisions where the forecast wasn't trustworthy"
+        ],
+        "tech": ["Python", "LightGBM", "Kubernetes", "Prometheus", "k6", "Docker", "FastAPI", "Next.js", "Vercel"],
         "links": {
           "github": "https://github.com/pavansai2608/predictive-autoscaling.git",
           "demo": "https://predictive-autoscaling.vercel.app"
@@ -102,9 +108,14 @@
         "name": "Customer Segmentation & Retention",
         "category": "ML Pipeline / Analytics",
         "metric": { "value": "540K+", "unit": "transactions", "caption": "229 high-value customers flagged" },
-        "headline": "Developed a customer segmentation and churn prediction pipeline processing 540K+ transactions into ranked retention actions, flagging 229 high-value customers worth £16.5K in predicted revenue.",
-        "description": "Combines a value estimate (BG/NBD + Gamma-Gamma for 90-day predicted lifetime value) with a risk estimate (XGBoost churn prediction, 0.78 ROC-AUC) rather than using either alone, crossing them into a four-quadrant action matrix so a retention analyst gets a ranked, justified call list instead of a raw model score. Served via FastAPI backend and React dashboard.",
-        "tech": ["Python", "XGBoost", "K-Means", "BG/NBD", "Gamma-Gamma", "FastAPI", "React", "MLflow", "DVC", "DagsHub", "Jenkins"],
+        "bullets": [
+          "Processes 540K+ raw transactions into 391K validated records across 4,334 customers",
+          "Crosses BG/NBD + Gamma-Gamma lifetime value with XGBoost churn risk (0.78 ROC-AUC) into an action matrix",
+          "Flagged 229 high-value, high-risk customers worth £16.5K in predicted 90-day revenue",
+          "RFM features with K-Means segments give each customer a readable label, not an opaque score",
+          "MLflow experiment tracking and DVC data versioning, served via FastAPI backend and React dashboard"
+        ],
+        "tech": ["Python", "XGBoost", "Logistic Regression", "K-Means", "BG/NBD", "Gamma-Gamma", "SMOTE", "FastAPI", "React", "MLflow", "DVC"],
         "links": {
           "github": "https://github.com/pavansai2608/customer-segmentation-retention.git",
           "demo": "https://customer-segmentation-retention-1-x35i.onrender.com/"
