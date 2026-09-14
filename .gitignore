@@ -3,3 +3,9 @@ dist/
 .vercel
 .DS_Store
 *.log
+
+# Impeccable dev artifacts (config and surface briefs stay tracked)
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/build/
+.impeccable/decision-payload*.json

@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-14T00:00:00Z",
+  "title": "Design System: Goli Pavan Sai Krishna",
+  "extensions": {
+    "colorMeta": {
+      "amber": { "role": "primary", "displayName": "Molten Amber", "canonical": "#FF9A3C", "tonalRamp": ["oklch(22% 0.06 58)", "oklch(34% 0.09 58)", "oklch(46% 0.12 58)", "oklch(58% 0.15 58)", "oklch(69% 0.16 58)", "oklch(77% 0.15 58)", "oklch(86% 0.10 64)", "oklch(95% 0.04 70)"] },
+      "amber-hot": { "role": "primary", "displayName": "Hot Amber", "canonical": "#FFC877", "tonalRamp": ["oklch(22% 0.05 72)", "oklch(34% 0.08 72)", "oklch(46% 0.10 72)", "oklch(58% 0.12 72)", "oklch(70% 0.13 72)", "oklch(86% 0.12 75)", "oklch(91% 0.08 78)", "oklch(96% 0.04 80)"] },
+      "white-hot": { "role": "primary", "displayName": "White Heat", "canonical": "#FFF3D6", "tonalRamp": ["oklch(22% 0.03 85)", "oklch(34% 0.04 85)", "oklch(46% 0.05 85)", "oklch(58% 0.05 85)", "oklch(70% 0.05 85)", "oklch(82% 0.05 85)", "oklch(90% 0.05 85)", "oklch(97% 0.04 85)"] },
+      "ember": { "role": "primary", "displayName": "Ember", "canonical": "#E0501F", "tonalRamp": ["oklch(20% 0.06 38)", "oklch(32% 0.10 38)", "oklch(44% 0.14 38)", "oklch(55% 0.18 38)", "oklch(63% 0.20 38)", "oklch(74% 0.14 40)", "oklch(85% 0.08 42)", "oklch(95% 0.03 45)"] },
+      "cobalt": { "role": "secondary", "displayName": "Night Cobalt", "canonical": "#17318F", "tonalRamp": ["oklch(18% 0.07 266)", "oklch(26% 0.11 266)", "oklch(34% 0.14 266)", "oklch(46% 0.15 266)", "oklch(58% 0.13 266)", "oklch(72% 0.09 266)", "oklch(85% 0.05 266)", "oklch(95% 0.02 266)"] },
+      "cobalt-ink": { "role": "secondary", "displayName": "Cobalt Ink", "canonical": "#EEF2FF", "tonalRamp": ["oklch(20% 0.03 270)", "oklch(32% 0.03 270)", "oklch(44% 0.03 270)", "oklch(56% 0.03 270)", "oklch(68% 0.03 270)", "oklch(80% 0.02 270)", "oklch(90% 0.02 270)", "oklch(96% 0.015 270)"] },
+      "soot": { "role": "neutral", "displayName": "Soot", "canonical": "#140D0A", "tonalRamp": ["oklch(15% 0.012 45)", "oklch(19% 0.015 45)", "oklch(25% 0.02 45)", "oklch(35% 0.02 45)", "oklch(50% 0.02 45)", "oklch(65% 0.02 50)", "oklch(80% 0.02 55)", "oklch(95% 0.015 60)"] },
+      "umber": { "role": "neutral", "displayName": "Umber", "canonical": "#1B120E", "tonalRamp": ["oklch(15% 0.015 45)", "oklch(19% 0.017 45)", "oklch(25% 0.022 45)", "oklch(35% 0.025 45)", "oklch(50% 0.025 45)", "oklch(65% 0.025 50)", "oklch(80% 0.02 55)", "oklch(95% 0.015 60)"] },
+      "umber-2": { "role": "neutral", "displayName": "Umber Bench", "canonical": "#251812", "tonalRamp": ["oklch(15% 0.02 45)", "oklch(22% 0.025 45)", "oklch(28% 0.03 45)", "oklch(38% 0.03 45)", "oklch(52% 0.03 45)", "oklch(66% 0.03 50)", "oklch(80% 0.025 55)", "oklch(95% 0.015 60)"] },
+      "glass": { "role": "neutral", "displayName": "Glass", "canonical": "#F7EBDD", "tonalRamp": ["oklch(20% 0.02 65)", "oklch(32% 0.02 65)", "oklch(44% 0.025 65)", "oklch(56% 0.025 65)", "oklch(68% 0.025 65)", "oklch(80% 0.025 65)", "oklch(89% 0.025 65)", "oklch(94.5% 0.02 65)"] },
+      "glass-dim": { "role": "neutral", "displayName": "Glass Dim", "canonical": "#D6C3B2", "tonalRamp": ["oklch(20% 0.02 60)", "oklch(32% 0.025 60)", "oklch(44% 0.03 60)", "oklch(56% 0.03 60)", "oklch(68% 0.03 60)", "oklch(82% 0.03 60)", "oklch(89% 0.025 60)", "oklch(95% 0.015 60)"] },
+      "glass-mute": { "role": "neutral", "displayName": "Glass Mute", "canonical": "#A88F7C", "tonalRamp": ["oklch(20% 0.02 55)", "oklch(32% 0.03 55)", "oklch(44% 0.035 55)", "oklch(56% 0.04 55)", "oklch(66% 0.04 55)", "oklch(78% 0.035 55)", "oklch(88% 0.025 55)", "oklch(95% 0.015 55)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name only; soft amber glow at rest; animates wdth/wght in the cool entrance. 15.4vw below 768px." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles, with neon glow and a drawn gradient bar; contact title runs larger; menu links reuse the voice." },
+      "title": { "displayName": "Title", "purpose": "Project names; glow on card hover." },
+      "subtitle": { "displayName": "Subtitle", "purpose": "Stack group names." },
+      "lead": { "displayName": "Lead", "purpose": "Hero tagline and About bio; light serif at 350." },
+      "body": { "displayName": "Body", "purpose": "Bullets and running prose, 62ch max." },
+      "caption": { "displayName": "Caption", "purpose": "Italic serif for captions, notes, categories." },
+      "label": { "displayName": "Label", "purpose": "Buttons, tags, nav links, hero project names, footer." }
+    },
+    "shadows": [
+      { "name": "card-rest", "value": "0 26px 56px -30px rgba(0,0,0,0.8), 0 0 46px -22px rgba(255,120,40,0.3)", "purpose": "Default glow card (stack, contact)." },
+      { "name": "card-project-rest", "value": "0 30px 64px -30px rgba(0,0,0,0.85), 0 0 80px -26px rgba(255,120,40,0.45)", "purpose": "Project cards burn brightest." },
+      { "name": "card-about-rest", "value": "0 22px 48px -30px rgba(0,0,0,0.75), 0 0 32px -22px rgba(255,120,40,0.2)", "purpose": "About cards sit quieter." },
+      { "name": "card-hover", "value": "0 34px 70px -30px rgba(0,0,0,0.85), 0 0 70px -18px rgba(255,130,45,0.5), 0 0 0 1px rgba(255,190,120,0.18)", "purpose": "Any glow card on hover." },
+      { "name": "frame-rest", "value": "0 34px 64px -34px rgba(0,0,0,0.85), 0 14px 26px -14px rgba(0,0,0,0.6)", "purpose": "Screenshot frame, over a blurred amber pool." },
+      { "name": "frame-hover", "value": "0 60px 90px -44px rgba(0,0,0,0.95), 0 26px 60px -30px rgba(255,120,40,0.38)", "purpose": "Frame lifted 10px." },
+      { "name": "glass-edge", "value": "inset 0 0 0 1px rgba(255,190,120,0.3), inset 0 1px 0 rgba(255,238,215,0.4)", "purpose": "Warm 1px rim and top highlight on screenshots; no inner wash." },
+      { "name": "button-molten", "value": "inset 0 1px 0 rgba(255,246,225,0.55), 0 14px 30px -14px rgba(255,120,40,0.6)", "purpose": "Primary pill." },
+      { "name": "tag-bead", "value": "inset 0 1px 0 rgba(255,244,230,0.3), inset 0 0 0 1px rgba(255,220,180,0.16), 0 8px 18px -10px rgba(0,0,0,0.7)", "purpose": "Glass bead tag at rest." },
+      { "name": "tag-molten-hover", "value": "inset 0 1px 0 rgba(255,250,235,0.65), 0 12px 22px -10px rgba(255,120,40,0.6), 0 0 22px rgba(255,140,50,0.55)", "purpose": "Tag turned molten." },
+      { "name": "field-lip", "value": "0 -40px 80px -30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.24)", "purpose": "Colour field rising over the previous section." },
+      { "name": "title-neon", "value": "text-shadow: 0 0 0.4em rgba(255,140,50,0.3), 0 0.04em 0.15em rgba(0,0,0,0.35)", "purpose": "Section title glow (blue 0.45em in cobalt, white-hot 0.5em in amber)." },
+      { "name": "figure-neon", "value": "text-shadow: 0 0 0.6em rgba(255,150,60,0.75), 0 0 0.18em rgba(255,196,120,0.6)", "purpose": "Glowing figures in claims." },
+      { "name": "title-bar", "value": "linear-gradient(90deg, #FFF3D6, #FF9A3C 40%, #E0501F); box-shadow: 0 0 20px rgba(255,140,50,0.65), 0 0 6px rgba(255,200,120,0.8)", "purpose": "5px drawn bar under section titles." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Default for nearly all transitions and reveals." },
+      { "name": "ease-in-out", "value": "cubic-bezier(0.65, 0, 0.35, 1)", "purpose": "Declared token for symmetric moves." },
+      { "name": "card-spin", "value": "rotate 360deg, 8s linear infinite; runs only while in view; hidden <768px and reduced motion", "purpose": "Travelling border light on glow cards." },
+      { "name": "frame-rim", "value": "--a 0→360deg, 2.6s linear infinite on hover", "purpose": "Conic rim light on hovered screenshot frames." },
+      { "name": "orb-drift", "value": "drift 18–32s ease-in-out alternate; paused out of view", "purpose": "Section background light." },
+      { "name": "hero-cool", "value": "1.9s ease-out, 48ms per letter + 0.25s; white-hot wdth75/wght200 → glass wdth100/wght700", "purpose": "Hero name entrance." },
+      { "name": "reveal", "value": "opacity 0.9s, transform 1.1s from translateY(30px) blur(8px); stagger 80ms capped 480ms", "purpose": "Block scroll reveals." },
+      { "name": "title-rise", "value": "1.25s ease-out, 90ms per word, from translateY(112%) rotate(4deg) in amber-hot", "purpose": "Section title words; bar draws 1.3s after 0.45s." },
+      { "name": "media-open", "value": "clip-path inset(16% 12%) → inset(0) 1.5s; image scale 1.3 → 1.03", "purpose": "Screenshot reveal." },
+      { "name": "bead", "value": "0.9s ease-out, 38ms per tag, from translateY(14px) scale(0.9) blur(4px)", "purpose": "Tag arrival." },
+      { "name": "count-up", "value": "1200ms (plates 1600ms) easeOutExpo at 60% visibility", "purpose": "Glowing figures count in." },
+      { "name": "button-wipe", "value": "::before translateY(102%) → 0, 0.55s; lift -2px", "purpose": "Button hover fill." },
+      { "name": "reduced-motion", "value": "html.motion absent: no entrance, drift, rotation, tilt, parallax, cursor, count-up; reveals are 0.5s opacity only; network draws one static frame", "purpose": "Full prefers-reduced-motion path." }
+    ],
+    "breakpoints": [
+      { "name": "stack-2col", "value": "700px" },
+      { "name": "mobile-max", "value": "767px" },
+      { "name": "nav-desktop", "value": "900px" },
+      { "name": "about-split", "value": "960px" },
+      { "name": "work-split", "value": "1024px" },
+      { "name": "stack-6col", "value": "1100px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Molten Button",
+      "kind": "button",
+      "refersTo": "button-molten",
+      "description": "Primary amber pill; white-hot fill wipes up on hover.",
+      "html": "<a class=\"ds-btn ds-btn-molten\" href=\"#\">View my work <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M12 5v14M6 13l6 6 6-6\"/></svg></a>",
+      "css": ".ds-btn{position:relative;display:inline-flex;align-items:center;gap:.65rem;min-height:3.25rem;padding:0 1.5rem;border-radius:999px;font-family:'Bricolage Grotesque','Avenir Next',sans-serif;font-size:1rem;font-weight:600;line-height:1;text-decoration:none;overflow:clip;isolation:isolate;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s cubic-bezier(.16,1,.3,1),color .35s}.ds-btn::before{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;transform:translateY(102%);transition:transform .55s cubic-bezier(.16,1,.3,1)}.ds-btn svg{width:1.1rem;height:1.1rem;transition:transform .5s cubic-bezier(.16,1,.3,1)}.ds-btn-molten{background:#FF9A3C;color:#140D0A;box-shadow:inset 0 1px 0 rgba(255,246,225,.55),0 14px 30px -14px rgba(255,120,40,.6)}.ds-btn-molten::before{background:#FFF3D6}.ds-btn:hover{transform:translateY(-2px)}.ds-btn:hover::before{transform:none}.ds-btn:hover svg{transform:translateY(3px)}.ds-btn-molten:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 22px 40px -16px rgba(255,130,50,.75)}.ds-btn:focus-visible{outline:2px solid #FFC877;outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary pill with a glass ring; glass fill wipes up and text turns soot.",
+      "html": "<div style=\"background:#1B120E;padding:24px\"><a class=\"ds-btn-ghost\" href=\"#\">Get in touch</a></div>",
+      "css": ".ds-btn-ghost{position:relative;display:inline-flex;align-items:center;min-height:2.75rem;padding:0 1.15rem;border-radius:999px;font-family:'Bricolage Grotesque','Avenir Next',sans-serif;font-size:.94rem;font-weight:600;line-height:1;color:#F7EBDD;text-decoration:none;overflow:clip;isolation:isolate;box-shadow:inset 0 0 0 1px rgba(247,235,221,.3);transition:transform .5s cubic-bezier(.16,1,.3,1),color .35s}.ds-btn-ghost::before{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;background:#F7EBDD;transform:translateY(102%);transition:transform .55s cubic-bezier(.16,1,.3,1)}.ds-btn-ghost:hover{color:#140D0A;transform:translateY(-2px)}.ds-btn-ghost:hover::before{transform:none}.ds-btn-ghost:focus-visible{outline:2px solid #FFC877;outline-offset:3px}"
+    },
+    {
+      "name": "Glass Bead Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Tech tags as glass beads that turn molten on hover.",
+      "html": "<div style=\"background:#1B120E;padding:24px;display:flex;gap:.5rem\"><span class=\"ds-tag\">PyTorch</span><span class=\"ds-tag\">Kubernetes</span><span class=\"ds-tag\">FastAPI</span></div>",
+      "css": ".ds-tag{padding:.6rem .95rem;border-radius:999px;font-family:'Bricolage Grotesque','Avenir Next',sans-serif;font-size:.875rem;font-weight:500;line-height:1;color:#D6C3B2;background-color:rgba(255,154,60,.04);background-image:linear-gradient(180deg,rgba(255,236,214,.18),rgba(255,236,214,.04) 60%,rgba(255,150,60,.06));box-shadow:inset 0 1px 0 rgba(255,244,230,.3),inset 0 0 0 1px rgba(255,220,180,.16),0 8px 18px -10px rgba(0,0,0,.7);transition:transform .5s cubic-bezier(.16,1,.3,1),color .3s,background-color .35s,box-shadow .5s}.ds-tag:hover{transform:translateY(-4px) scale(1.04);color:#140D0A;background-color:#FF9A3C;box-shadow:inset 0 1px 0 rgba(255,250,235,.65),0 12px 22px -10px rgba(255,120,40,.6),0 0 22px rgba(255,140,50,.55)}"
+    },
+    {
+      "name": "Glow Card",
+      "kind": "card",
+      "refersTo": "glow-card",
+      "description": "Signature container: gradient border, rotating conic light, cursor spotlight, title glow on hover.",
+      "html": "<div style=\"background:#1B120E;padding:40px\"><div class=\"ds-glow-card\"><h3 class=\"ds-glow-title\">Databases</h3><p class=\"ds-glow-body\">Cut p99 latency <span class=\"ds-num\">62%</span>, from <span class=\"ds-num\">479</span> to <span class=\"ds-num\">183 ms</span>.</p></div></div>",
+      "css": "@keyframes ds-spin{to{rotate:360deg}}.ds-glow-card{position:relative;isolation:isolate;overflow:clip;max-width:26rem;padding:2rem;border-radius:1.6rem;background:linear-gradient(135deg,rgba(255,170,90,.5),rgba(255,154,60,.1) 35%,rgba(255,154,60,.1) 65%,rgba(224,80,31,.45));box-shadow:0 26px 56px -30px rgba(0,0,0,.8),0 0 46px -22px rgba(255,120,40,.3);transition:box-shadow .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}.ds-glow-card::before{content:'';position:absolute;z-index:-2;left:50%;top:50%;width:160%;aspect-ratio:1;translate:-50% -50%;background:conic-gradient(from 0deg,transparent 0deg 235deg,rgba(255,154,60,.85) 290deg,#FFF3D6 318deg,rgba(224,80,31,.8) 340deg,transparent 360deg);animation:ds-spin 8s linear infinite}.ds-glow-card::after{content:'';position:absolute;z-index:-1;inset:1.5px;border-radius:calc(1.6rem - 1.5px);background:linear-gradient(165deg,#2A1B13,#1C130E 60%,#1A110D)}.ds-glow-card:hover{transform:translateY(-6px);box-shadow:0 34px 70px -30px rgba(0,0,0,.85),0 0 70px -18px rgba(255,130,45,.5),0 0 0 1px rgba(255,190,120,.18)}.ds-glow-title{margin:0 0 1rem;font-family:'Bricolage Grotesque','Avenir Next',sans-serif;font-size:2rem;font-weight:600;letter-spacing:-.025em;line-height:1.05;color:#F7EBDD;transition:text-shadow .5s}.ds-glow-card:hover .ds-glow-title{text-shadow:0 0 .5em rgba(255,150,60,.55)}.ds-glow-body{margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:1.0625rem;line-height:1.6;color:#D6C3B2}.ds-num{color:#FFC877;font-weight:600;font-variant-numeric:lining-nums tabular-nums;text-shadow:0 0 .6em rgba(255,150,60,.75),0 0 .18em rgba(255,196,120,.6)}@media (prefers-reduced-motion:reduce){.ds-glow-card::before{display:none}.ds-glow-card:hover{transform:none}}"
+    },
+    {
+      "name": "Neon Section Title",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Section heading with amber glow and a glowing heat bar drawn beneath.",
+      "html": "<div style=\"background:#1B120E;padding:40px\"><h2 class=\"ds-title\">Selected work</h2></div>",
+      "css": ".ds-title{margin:0;font-family:'Bricolage Grotesque','Avenir Next',sans-serif;font-weight:700;font-size:4.5rem;line-height:.9;letter-spacing:-.04em;color:#F7EBDD;text-shadow:0 0 .4em rgba(255,140,50,.3),0 .04em .15em rgba(0,0,0,.35)}.ds-title::after{content:'';display:block;width:7.5rem;height:5px;margin-top:.3em;border-radius:5px;background:linear-gradient(90deg,#FFF3D6,#FF9A3C 40%,#E0501F);box-shadow:0 0 20px rgba(255,140,50,.65),0 0 6px rgba(255,200,120,.8);transform-origin:left center;transition:transform 1.3s cubic-bezier(.16,1,.3,1)}.ds-title:hover::after{transform:scaleX(1.25)}"
+    },
+    {
+      "name": "Screenshot Frame",
+      "kind": "card",
+      "refersTo": "frame",
+      "description": "Screenshot seated with a warm glass edge over an amber light pool; lifts with a rotating rim light on hover.",
+      "html": "<div style=\"background:#1B120E;padding:48px\"><div class=\"ds-frame\"><button class=\"ds-frame-btn\" type=\"button\" aria-label=\"Open screenshot\"><span class=\"ds-frame-shot\"></span></button><span class=\"ds-frame-rim\"></span></div></div>",
+      "css": "@property --ds-a{syntax:'<angle>';inherits:false;initial-value:0deg}@keyframes ds-rim{to{--ds-a:360deg}}.ds-frame{position:relative;max-width:28rem;border-radius:1.25rem;box-shadow:0 34px 64px -34px rgba(0,0,0,.85),0 14px 26px -14px rgba(0,0,0,.6);transition:transform .8s cubic-bezier(.16,1,.3,1),box-shadow .8s cubic-bezier(.16,1,.3,1)}.ds-frame::before{content:'';position:absolute;inset:20% -4% -16% -4%;z-index:-1;border-radius:50%;background:radial-gradient(closest-side,rgba(255,140,50,.4),rgba(224,80,31,.14) 60%,transparent);filter:blur(26px);opacity:.85;pointer-events:none}.ds-frame-btn{position:relative;display:block;width:100%;padding:0;border:0;border-radius:inherit;background:#251812;overflow:clip;cursor:pointer}.ds-frame-btn::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,190,120,.3),inset 0 1px 0 rgba(255,238,215,.4)}.ds-frame-shot{display:block;aspect-ratio:16/10;background:linear-gradient(180deg,#F4F1EC 0 14%,#FFFFFF 14%)}.ds-frame-rim{position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:conic-gradient(from var(--ds-a),transparent 0deg 230deg,rgba(255,154,60,.95) 300deg,#FFF3D6 330deg,transparent 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);opacity:0;transition:opacity .5s;pointer-events:none}.ds-frame:hover{transform:translateY(-10px);box-shadow:0 60px 90px -44px rgba(0,0,0,.95),0 26px 60px -30px rgba(255,120,40,.38)}.ds-frame:hover .ds-frame-rim{opacity:1;animation:ds-rim 2.6s linear infinite}.ds-frame-btn:focus-visible{outline:2px solid #FFC877;outline-offset:3px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-toggle",
+      "description": "Solid-on-scroll bar: name mark, draw-underline links with a glowing active link, ghost CTA.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-mark\" href=\"#\">Goli Pavan Sai Krishna</a><a class=\"ds-nav-link\" href=\"#\">About</a><a class=\"ds-nav-link\" aria-current=\"true\" href=\"#\">Work</a><a class=\"ds-nav-link\" href=\"#\">Stack</a><a class=\"ds-nav-link\" href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:1.9rem;padding:.85rem 2rem;min-height:4.5rem;background:rgba(20,13,10,.92);box-shadow:0 12px 32px -14px rgba(0,0,0,.7)}.ds-nav-mark{margin-right:auto;font-family:'Bricolage Grotesque','Avenir Next',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:-.015em;color:#F7EBDD;text-decoration:none}.ds-nav-link{padding-bottom:.14em;font-family:'Bricolage Grotesque','Avenir Next',sans-serif;font-size:.98rem;font-weight:500;color:#D6C3B2;text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-size:0% 1.5px;background-position:100% 100%;background-repeat:no-repeat;transition:background-size .65s cubic-bezier(.16,1,.3,1),color .3s}.ds-nav-link:hover,.ds-nav-link:focus-visible{background-size:100% 1.5px;background-position:0 100%}.ds-nav-link[aria-current='true']{color:#FFC877;text-shadow:0 0 14px rgba(255,150,60,.6);background-size:100% 1.5px;background-position:0 100%}"
+    },
+    {
+      "name": "Lightbox Control",
+      "kind": "button",
+      "refersTo": "lightbox-button",
+      "description": "Circular glass control that turns molten on hover, plus the stretched active dot.",
+      "html": "<div style=\"background:#0E0907;padding:24px;display:flex;align-items:center;gap:1rem\"><button class=\"ds-lb-btn\" type=\"button\" aria-label=\"Next\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><path d=\"M9 6l6 6-6 6\"/></svg></button><span class=\"ds-lb-dot\"></span><span class=\"ds-lb-dot is-on\"></span><span class=\"ds-lb-dot\"></span></div>",
+      "css": ".ds-lb-btn{display:grid;place-items:center;width:3rem;height:3rem;border:0;border-radius:50%;background:rgba(247,235,221,.08);color:#F7EBDD;box-shadow:inset 0 0 0 1px rgba(247,235,221,.16);cursor:pointer;transition:background-color .3s,color .3s,transform .5s cubic-bezier(.16,1,.3,1)}.ds-lb-btn svg{width:1.25rem;height:1.25rem}.ds-lb-btn:hover{background:#FF9A3C;color:#140D0A;transform:scale(1.06)}.ds-lb-btn:focus-visible{outline:2px solid #FFC877;outline-offset:3px}.ds-lb-dot{width:.55rem;height:.55rem;border-radius:999px;background:rgba(247,235,221,.3)}.ds-lb-dot.is-on{background:#FF9A3C;transform:scaleX(2.4);margin-inline:.4rem}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Lab Lit From Within",
+    "overview": "This is a warm AI lab at night: a soot-and-umber room with drifting amber light, where a live node network thinks behind the name and every block of evidence sits in a card with a light travelling around its edge. The origin is a glassblowing hot shop (the name cools from white heat, bullet marks are drawn threads of hot glass, screenshots get an annealed glass edge). The user then redirected it toward a living network and glowing, highlighted surfaces. What ships is both worlds: glass-shop heat as the material, network and neon glow as the effects.\n\nThe density is generous. Type runs at viewport scale, sections breathe (6 to 11rem of vertical padding), and project cards give the screenshot and the claims equal weight. Light does the work that lines and boxes would do in a cooler system. Headings glow and get a drawn bar underneath, figures glow amber, and tags are glass beads that turn molten on hover. The page changes colour twice, the way glass cools. First comes a cobalt field for the stack, then an amber field for contact, and each rises over the previous section with a rounded lip.\n\nThe user has explicitly rejected: monospace as the dominant face, terminal or console framing, status-light or instrument-panel motifs, grid overlays and scanlines, anything that reads as technical documentation, a plain document-like page, and an unexplained hero object (the earlier molten-glass orb).",
+    "keyCharacteristics": [
+      "Warm dark ground (soot, umber) with one hot accent family (amber, amber-hot, white-hot, ember).",
+      "Two full-bleed colour fields (cobalt, amber) that rise over the page with a rounded top lip.",
+      "An interactive 2D canvas node network across the hero, masked away from the text column.",
+      "Glow cards on every block, with a rotating conic border light, a cursor spotlight, and optional tilt.",
+      "Neon highlights: glowing section titles with a drawn gradient bar, glowing figures, bead tags, a glowing active nav link.",
+      "Choreographed motion that is gated entirely behind `prefers-reduced-motion: no-preference`."
+    ],
+    "rules": [
+      { "name": "The One Heat Rule", "body": "Every warm light on the page is one gradient family, running from white-hot through amber to ember. A new glow uses that family. It never introduces another hue.", "section": "colors" },
+      { "name": "The Cooling Fields Rule", "body": "The page changes ground only twice: umber, then cobalt (stack), then amber (close). Fields rise over the previous section with a rounded top lip (`field-lip`) and a 1px white inset highlight. They are not alternating stripes.", "section": "colors" },
+      { "name": "The Inverted Field Rule", "body": "Inside the amber field, titles and text turn soot, the title bar runs from soot to scorch brown, and the title glow becomes white-hot. Cards stay dark islands, so their contents keep glass text and the cursor keeps its light-ground styling off them.", "section": "colors" },
+      { "name": "The Serif Speaks, The Grotesque Names Rule", "body": "Sentences are always Source Serif 4, and names, titles and controls are always Bricolage Grotesque. No monospace anywhere.", "section": "typography" },
+      { "name": "The Glowing Figure Rule", "body": "Every number inside a project claim is wrapped as a figure. It renders in amber-hot at weight 600 with lining tabular numerals and a two-layer glow (`0 0 0.6em rgba(255,150,60,0.75), 0 0 0.18em rgba(255,196,120,0.6)`), and it counts up from zero when 60% visible. Figures are the neon of the prose, so they are never bolded without the glow.", "section": "typography" },
+      { "name": "The Hierarchy of Light Rule", "body": "Glow strength follows importance: project cards are brightest, stack and contact cards take the default, and About cards are quietest. A new card takes the default glow unless it is primary evidence.", "section": "elevation" },
+      { "name": "The Glow Plus Shadow Rule", "body": "Every raised surface pairs a dark drop shadow (for depth) with an amber ambient (for heat). A shadow without the warm layer reads as a foreign component.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** put every new content block in a glow card, and choose its glow level by The Hierarchy of Light Rule.",
+      "**Do** build every warm light from the white-hot, amber, ember family, and pair it with a dark drop shadow.",
+      "**Do** wrap every number in a claim as a glowing, counting figure.",
+      "**Do** pause any perpetual animation (card rotation, orbs, network) when its element is offscreen, and remove it under `prefers-reduced-motion`.",
+      "**Do** mask decorative light (network, orbs) away from text and section edges, so type always sits in clean air.",
+      "**Do** gate cursor-driven effects (spotlight, tilt, reach, custom cursor) to `(hover: hover) and (pointer: fine)`, and give coarse pointers a self-driven or static equivalent.",
+      "**Do** keep touch targets at 44px or more (lightbox dots 2.75rem, toggles 2.9–3rem)."
+    ],
+    "donts": [
+      "**Don't** use monospace as a dominant face, terminal or console framing, status lights, instrument-panel motifs, grid overlays or scanlines.",
+      "**Don't** set sentences in Bricolage Grotesque or names and titles in Source Serif 4.",
+      "**Don't** introduce a third colour field or a non-amber accent hue on the umber ground.",
+      "**Don't** place an unexplained decorative object in the hero. The network is the hero's only object.",
+      "**Don't** add an inner colour wash over screenshots; the glass edge is only the 1px warm rim and top highlight.",
+      "**Don't** run the conic card light on screens below 768px."
+    ]
+  }
+}

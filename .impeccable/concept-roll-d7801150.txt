@@ -1,0 +1,124 @@
+DIRECTION CONCEPT SEED (key: d7801150; mode: experience; source: api; approved pool: c3b204a1eed6; 306/564 human-approved; rerun with --scope direction --mode experience --from d7801150 --candidate-count 7 to reproduce this roll against this catalog revision)
+ASSIGNED INDEX: 6
+  After ordering the grounded directions by resonance, build candidate
+  6 of your own grounded list; the assignment never points at a
+  challenger. The assignment is the roll, not a suggestion: your top-ranked
+  direction is what every run would ship, so the script decides which grounded
+  direction gets built. Each direction joins a durable visual system to a
+  concrete expression for the requested first surface, decided as one. It must
+  survive the current task plus navigation, quiet and dense content,
+  interaction and state, and a substantially different future surface. In an
+  attended run, present the assigned direction fully committed and offer
+  re-roll. You may add ONE card for your top-ranked grounded candidate when
+  it is not the assigned direction, kicker IMPECCABLE’S PICK, with an honest risk line
+  naming its familiarity; one pick card, never a ranked lineup, and the pick
+  never takes the lead position. When the assignment IS your top candidate,
+  there is no pick card. Re-roll yourself only
+  on named factual grounds, when the assignment cannot carry the product's
+  truth or task; taste is never grounds.
+  The assignment exists to refuse the model's ranking rut, never to outrank
+  the user or the brief. Never expose assignment metadata in user-facing labels.
+CHALLENGERS:
+  1. a vu-meter bridge across a recording desk, a long row of ballistic needles behind glass that all lean into the red on the same downbeat
+     SOURCE ID: signals-instruments-vu-meter-bridge
+     CREATIVE SPARK: Twenty needles lie asleep against their left pins until the chorus hits, and then the whole bridge leans right together, trembling at the edge of the red like horses at a gate.
+     SYSTEM GRAMMAR:
+       - Palette/material: warm ivory meter faces behind glass, black scale arcs and needles as the working ink, walnut and steel desk frame; the arc past zero is the only red
+       - Type/composition: the VU scale's flared numerals and minus-to-plus arc on every face, channel numbers in strip labels below; identical meters repeat as the row's ruler
+       - Topology/navigation: identical channels stand shoulder to shoulder; you read the room by sweeping the whole row, never by opening one meter
+       - Controls/state: each needle integrates the last 300ms with weighted overshoot; the arc past zero is the only red the instrument allows
+       - Responsive/motion: narrow viewports stack the row into bar ballistics
+     WEB LEVERAGE: an AnalyserNode feeds real signal levels; canvas needles obey true VU ballistics with mass and damping, never instant values
+     QUALITY BAR: board https://impeccable.style/worlds/cards/signals-instruments-vu-meter-bridge.webp · hero https://impeccable.style/worlds/cards/signals-instruments-vu-meter-bridge-hero.webp
+  2. a HyperCard shoebox stack, where black-and-white cards link through buttons anyone can paint and the tool for reading is also the tool for making
+     SOURCE ID: medium-native-hypercard-stack-shoebox
+     CREATIVE SPARK: A shoebox of black-and-white cards where clicking a hand-painted button flips you somewhere the author felt you should go next, and the paint tools are one menu away.
+     SYSTEM GRAMMAR:
+       - Palette/material: one-bit black on white with stipple-dither grays and no color anywhere, the pressed button inverting to solid black as its active state
+       - Type/composition: bold Chicago-style pixel menus over Geneva-style body text, cards composing as fixed rectangles with hand-drawn borders and painted buttons
+       - Topology/navigation: space is a stack of cards linked by visible buttons; back retraces your exact trail through them.
+       - Controls/state: every card is editable in place; browse and author are two modes of the same object.
+       - Responsive/motion: cards keep fixed proportions and dissolve between each other
+     WEB LEVERAGE: History API and deep links make every card addressable, while in-place editing keeps reader and author one keypress apart.
+     QUALITY BAR: board https://impeccable.style/worlds/cards/medium-native-hypercard-stack-shoebox.webp · hero https://impeccable.style/worlds/cards/medium-native-hypercard-stack-shoebox-hero.webp
+  3. an Emigre bitmap type specimen, where coarse pixel letterforms are set proudly at poster scale and the low resolution is the aesthetic
+     SOURCE ID: emigre-bitmap-specimen
+     CREATIVE SPARK: A headline built from visible pixels towers over dense justified columns; the same face repeats at five sizes, and at the smallest the pixels dissolve into smooth gray text.
+     SYSTEM GRAMMAR:
+       - Palette/material: newsprint white and rich black with one synthetic accent; halftone and dot-matrix textures as legitimate surfaces
+       - Type/composition: coarse bitmap display faces against fine text grotesks; specimen-style repetition of one form at many sizes
+       - Topology/navigation: Move by typeface, by size step, and by issue spread.
+       - Controls/state: Scale, compare, and toggle bitmap versus smooth rendering as an honest state.
+       - Responsive/motion: Pixel letterforms scale only in whole-pixel multiples; nothing antialiases unless the reader asks.
+     WEB LEVERAGE: Pixel-honest display type via image-rendering rules and font sizes locked to integer multiples
+     QUALITY BAR: board https://impeccable.style/worlds/cards/emigre-bitmap-specimen.webp · hero https://impeccable.style/worlds/cards/emigre-bitmap-specimen-hero.webp
+  4. a pulp magazine interior plate of a finned rocket over a red planet, airbrushed chrome hull and porthole rings against a starfield, the story title lettered in streamlined caps trailing speed lines
+     SOURCE ID: pop-culture-shelf-pulp-rocketship-plate
+     CREATIVE SPARK: a rocket with fins it does not need, crossing a red sky on a diagonal, trailing three speed lines the illustrator clearly enjoyed adding, and a title lettered like it is already going fast.
+     SYSTEM GRAMMAR:
+       - Palette/material: oxidized red and deep space blue over pulp paper that yellows at the edges, hull rendered in airbrushed grays with no true white
+       - Type/composition: streamlined caps trailing speed lines, the craft crossing on a strong diagonal, and a ruled caption box in one lower corner
+       - Topology/navigation: everything travels a diagonal trajectory, so navigation follows the flight path from one plate to the next
+       - Controls/state: controls are porthole rings, the active one lights from within, and inactive ones stay as dark rimmed circles
+       - Responsive/motion: the diagonal re-angles to the frame and the craft holds scale, and motion is a speed-line trail with a slight drift
+     WEB LEVERAGE: an svg flight path that re-angles responsive, speed-line trail animation, and porthole controls with lit state
+     QUALITY BAR: board https://impeccable.style/worlds/cards/pop-culture-shelf-pulp-rocketship-plate.webp · hero https://impeccable.style/worlds/cards/pop-culture-shelf-pulp-rocketship-plate-hero.webp
+  5. a multiplane cel-animation dawn, where hand-painted forest planes slide at different speeds and the camera sinks through mist toward a lit cottage
+     SOURCE ID: cinema-cinematography-editing-multiplane-cel-dawn
+     CREATIVE SPARK: The nearest ferns blur past, the middle forest drifts, the far ridge barely breathes: five paintings pretending, perfectly, to be one morning.
+     SYSTEM GRAMMAR:
+       - Palette/material: gouache forest greens and mist blue-gray planes over a deep umber ground, the cottage window's lamp amber as the single active accent
+       - Type/composition: hand-painted title-card serifs held on their own clear cel, text always on the nearest plane, composition banded by painted depth layers
+       - Topology/navigation: scenes are stacked painted planes; travel is camera movement through layers, not page swaps.
+       - Controls/state: focus racks between planes; interactive elements live on their own cel above the painting.
+       - Responsive/motion: plane count reduces gracefully on phones; parallax follows scroll and freezes into a full composition under
+     WEB LEVERAGE: Scroll-linked parallax planes with real painted-texture assets and rack-focus blur via CSS filters.
+     QUALITY BAR: board https://impeccable.style/worlds/cards/cinema-cinematography-editing-multiplane-cel-dawn.webp · hero https://impeccable.style/worlds/cards/cinema-cinematography-editing-multiplane-cel-dawn-hero.webp
+  6. the gardens of Versailles as a choreographed landscape of axial vistas, embroidered parterres, concealed bosquets, hydraulic fountains, forced perspective, and rooms made from living walls
+     SOURCE ID: architecture-inhabitable-space-versailles-bosquet-vistas
+     CREATIVE SPARK: From the palace terrace, clipped geometry appears infinite; descending one axis breaks the perfection into secret green theaters just as a hundred fountains wake in sequence.
+     SYSTEM GRAMMAR:
+       - Palette/material: clipped hedge green and raked gravel buff as ground, gilt bronze and fountain-spray white as active accents, marble statuary gray at fixed points
+       - Type/composition: engraved garden-plan capitals with hairline flourishes, labels set along axial sightlines, parterres composed in strict mirrored symmetry
+       - Topology/navigation: Move from palace axis to parterre, cross-vista, bosquet threshold, fountain chamber, canal horizon, and the labor beneath the spectacle.
+       - Controls/state: Walk, reveal, align, compare plans, follow water, and inspect dormant, flowing, private, ceremonial, altered, and conserved states.
+       - Responsive/motion: Turn each axial reveal into a measured garden sequence on phones
+     WEB LEVERAGE: Registered historic maps, solar and perspective computation, spatial fountain audio, deep-linked walks, and conservation overlays let users examine beauty, power, labor, and water demand together.
+     QUALITY BAR: board https://impeccable.style/worlds/cards/architecture-inhabitable-space-versailles-bosquet-vistas.webp · hero https://impeccable.style/worlds/cards/architecture-inhabitable-space-versailles-bosquet-vistas-hero.webp
+Fuse each challenger before judging it: the challenger supplies the form
+  and its system grammar, the product supplies every fact, and clarity wins
+  conflicts. Weigh the fused result against the assigned direction on exactly
+  two axes, audience identification and product clarity. Losing to strong
+  grounded material is a valid outcome; beating a thin or tool-monoculture
+  list is the point. A fused challenger that wins both axes becomes the build.
+  Close the weighing with a verdict per challenger, decided before any
+  borrowing is considered: wins (beats the assigned direction on both axes),
+  competitive (holds one axis), or declined (loses both). A declined
+  challenger is not spent: name the one discipline of its system the assigned
+  direction lacks, and raise the assigned direction to match before
+  presenting it. A donation transfers ambition and system discipline, never
+  the challenger's clothes; one world owns the page. Write each raise as its
+  own named line on the presented direction, and carry every verdict, kept
+  line, and raise into the decision page payload.
+When you can view images, open the QUALITY BAR board and hero for any
+challenger you weigh seriously and for the world you build. They exist as a
+craft bar, the finish level and commitment the build is expected to reach,
+never as a mockup to copy; your surface serves this product, not that render.
+PRODUCT.md and explicit incumbent brand commitments constrain every direction.
+The seed never chooses exact colors, fonts, tokens, or a user preference, and
+it never permits the world and first surface to be selected independently.
+The CREATIVE SPARK is a complete visual system, not a theme or decorative
+reference. Translate every supplied system rule into the product: palette and
+material, type and composition, topology, controls and states, and adaptation.
+Keep the source's visible character, scale, rhythm, and interaction instead of
+reducing vivid grammar to generic nouns. When the source is already a credible
+interface language, commit to it across navigation, content, controls, and
+states. Otherwise keep a literal carrier only when it becomes functional.
+Ambitious motion, spatial media, or interaction is welcome when it strengthens
+the product without weakening semantics, performance, or fallback behavior.
+AFTER THE CHOICE, run exactly one command and follow what it prints (do not suppress its output; do not write page code before it):
+  node ../../../.claude/skills/impeccable/scripts/build-phase.mjs start --direction d7801150 --kind <assigned|pick|challenger|canon> [--chosen <challenger-id>]
+  It records the choice (anonymous: card kind plus catalog id; skipped under DO_NOT_TRACK / IMPECCABLE_NO_TELEMETRY) and opens the build phases: on a comp-led build the comp round is the first gate (three comps, one approved) and no page code is written before it closes; on a code-led build it prints the contract step. A build without this state file is a build the finish reviewer treats as having skipped the round.
+A user- or brief-pinned decision beats the roll, always.
+ASSIGNED INDEX (restated for truncated readers): 6. Build candidate
+6 of your own grounded list; seed key d7801150.
