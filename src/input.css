@@ -1424,6 +1424,25 @@
 .js [data-reveal="tags"]:not(.is-in) .tag { opacity: 0; }
 .motion [data-reveal="tags"]:not(.is-in) .tag { transform: translateY(14px) scale(0.9); }
 .motion [data-reveal="tags"].is-in .tag { animation: bead 0.9s var(--ease-out) calc(var(--i, 0) * 38ms + var(--d, 0ms)) backwards; }
+/* Contact field: a warm sand close instead of a saturated amber panel. The
+   heading and the two channel cards are already dark, so a light field keeps
+   them legible, and amber goes back to being an accent rather than the
+   background. */
+.field-amber {
+  background:
+    radial-gradient(75% 60% at 85% 0%, rgba(255, 255, 255, 0.85), transparent 60%),
+    radial-gradient(65% 65% at 0% 100%, rgba(224, 80, 31, 0.12), transparent 70%),
+    var(--color-glass);
+}
+.field-amber .section-title { text-shadow: 0 0.04em 0.12em rgba(90, 46, 20, 0.18); }
+.field-amber .section-title::after {
+  background: linear-gradient(90deg, #E0501F, #FF9A3C);
+  box-shadow: 0 0 16px rgba(224, 80, 31, 0.35);
+}
+.field-amber .orb { background: radial-gradient(closest-side, rgba(224, 80, 31, 0.14), transparent 70%); }
+.field-amber .orb:nth-child(2n) { background: radial-gradient(closest-side, rgba(255, 154, 60, 0.16), transparent 70%); }
+.field-amber .glow-card { box-shadow: 0 26px 54px -28px rgba(74, 44, 31, 0.45), 0 0 0 1px rgba(90, 46, 20, 0.07); }
+
 @keyframes bead {
   from { opacity: 0; transform: translateY(14px) scale(0.9); filter: blur(4px); }
 }
