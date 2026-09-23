@@ -1,5 +1,193 @@
 {
   "meta": {
+    "title": "Goli Pavan Sai Krishna — AI/ML & Full-Stack Engineer",
+    "description": "Final-year B.Tech CSE (Data Science) student building measured, production-grade systems — agentic RAG, MLOps forecasting, applied ML for support triage, customer analytics, and the full-stack services around them.",
+    "url": "https://portfolio-two-rho-1efh6kojg3.vercel.app"
+  },
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Work", "href": "#work" },
+    { "label": "Stack", "href": "#stack" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "name": "Goli Pavan Sai Krishna",
+    "tagline": "Building AI and ML systems end to end — agentic RAG, forecasting, applied ML, and the full-stack services that ship them.",
+    "ctas": [
+      { "label": "View my work", "href": "#work", "style": "primary" },
+      { "label": "Get in touch", "href": "#contact", "style": "ghost" }
+    ]
+  },
+  "about": {
+    "heading": "About",
+    "kicker": "The short version",
+    "bio": "I'm a final-year B.Tech CSE (Data Science) student at NIIT University, building end-to-end AI and ML systems rather than notebooks — an agentic RAG pipeline that audits insurance bills clause-by-clause with zero fabricated citations, a Kubernetes autoscaler that forecasts traffic and beats the stock autoscaler by 62% (and honestly reports where it didn't), a support platform that classifies every incoming complaint and routes it by urgency through an explainable priority engine, a customer analytics pipeline that turns raw transactions into ranked retention decisions, and a hybrid recommender built to replace a feature that turned out to be a hardcoded constant. I care most about systems that measure their own claims instead of asserting them.",
+    "education": {
+      "label": "Education",
+      "degree": "B.Tech, Computer Science & Engineering",
+      "specialization": "Data Science",
+      "institution": "NIIT University",
+      "duration": "2023 — 2027",
+      "year": "4th year",
+      "cgpa": "6.22",
+      "rows": [
+        { "key": "Degree", "value": "B.Tech CSE (Data Science)" },
+        { "key": "Institution", "value": "NIIT University" },
+        { "key": "Duration", "value": "2023 — 2027" },
+        { "key": "Current year", "value": "4th year" },
+        { "key": "CGPA", "value": "6.22" }
+      ]
+    }
+  },
+  "work": {
+    "heading": "Selected work",
+    "kicker": "Five systems, measured end to end",
+    "note": "Every headline number below comes from a test suite or a controlled benchmark in the repo — not an estimate.",
+    "projects": [
+      {
+        "id": "bill-auditor",
+        "station": "RAG",
+        "images": [
+          { "src": "images/bill-auditor-audit.webp", "w": 1600, "h": 909, "alt": "Bill Auditor audit summary: payable, deducted and flagged totals for a hospital bill" },
+          { "src": "images/bill-auditor-lines.webp", "w": 1600, "h": 777, "alt": "Line-by-line deduction table, each row naming the policy clause behind it" },
+          { "src": "images/bill-auditor-input.webp", "w": 1600, "h": 909, "alt": "Audit input screen: the hospital bill on the left, the policy details on the right" },
+          { "src": "images/bill-auditor-hero.webp", "w": 1600, "h": 922, "alt": "Bill Auditor landing page" }
+        ],
+        "index": "01",
+        "name": "Bill Auditor",
+        "category": "Agentic RAG",
+        "metric": { "value": "492", "unit": "passing tests", "caption": "Zero fabricated clause citations" },
+        "bullets": [
+          "Audits hospital bills against insurance policy documents line-by-line, citing the exact clause behind every deduction",
+          "Zero fabricated clause citations across all recorded evaluation versions",
+          "Hybrid dense + lexical retrieval (ChromaDB + BM25) with cross-encoder reranking over a 399-clause index",
+          "LLM never performs arithmetic — all money math runs in Python, keeping every figure verifiable",
+          "Evaluation harness scores 328 bill lines against a model-derived answer key; accuracy threshold gates CI and blocks regressions",
+          "492 unit tests across an 8-stage Jenkins pipeline, deployed to Kubernetes"
+        ],
+        "tech": ["Python","LangGraph","LangChain","FastAPI","Pydantic","ChromaDB","BM25","sentence-transformers","Groq","Ollama","React","TypeScript","Docker","Kubernetes","Jenkins"],
+        "links": { "github": "https://github.com/pavansai2608/bill-auditor.git", "demo": "https://pavansai2608.github.io/bill-auditor/" }
+      },
+      {
+        "id": "predictive-autoscaling",
+        "station": "SCALE",
+        "images": [
+          { "src": "images/autoscaling-overview.webp", "w": 1600, "h": 1000, "alt": "Benchmark overview reporting 62% lower p99 latency against the stock autoscaler" },
+          { "src": "images/autoscaling-replay.webp", "w": 1600, "h": 1000, "alt": "Benchmark replay view with a scrubber for stepping through a run second-by-second" }
+        ],
+        "index": "02",
+        "name": "Predictive Autoscaling for Kubernetes",
+        "category": "MLOps / Forecasting",
+        "metric": { "value": "62%", "unit": "lower p99 latency", "caption": "Three runs per arm, identical traffic" },
+        "bullets": [
+          "Built an autoscaler that forecasts traffic 60 seconds ahead and adds pods before the load arrives, instead of after",
+          "Cut p99 latency 62% (479 → 183 ms) vs default Kubernetes autoscaling — three runs per arm on byte-identical traffic, for 28% more compute",
+          "Forecast request rate with a LightGBM quantile model on 39 time-series features, tuned to over-predict since running short costs 10x more",
+          "Fixed a 40% slowdown on traffic spikes by raising the HPA's floor instead of setting pods directly — 49% better than HPA alone",
+          "Safety checks declined to act on 23% of 980 logged decisions where the forecast wasn't trustworthy"
+        ],
+        "tech": ["Python","LightGBM","Kubernetes","Prometheus","k6","Docker","FastAPI","Next.js","Vercel"],
+        "links": { "github": "https://github.com/pavansai2608/predictive-autoscaling.git", "demo": "https://predictive-autoscaling.vercel.app" }
+      },
+      {
+        "id": "complaint-classification",
+        "station": "TRIAGE",
+        "images": [],
+        "index": "03",
+        "name": "Complaint Classification & Resolution System",
+        "category": "Applied ML / Full-stack",
+        "metric": { "value": "79%", "unit": "classifier accuracy", "caption": "78.8% exact, 0.79 macro-F1 on a held-out set" },
+        "description": "A support platform where an AI pipeline reads every incoming complaint the moment it arrives — category, sentiment, urgency and a draft reply — so agents work a prioritised queue instead of a first-in-first-out inbox.",
+        "bullets": [
+          "An urgent case — fraud, a refund never received, a legal threat — surfaces at the top of the queue instead of waiting behind routine complaints",
+          "TF-IDF + logistic regression classifier reaches 78.8% accuracy and 0.79 macro-F1 on a held-out test set, tuned by 5-fold grid search",
+          "Returns its own confidence with every prediction and routes low-confidence complaints to human review rather than trusting a shaky guess",
+          "De-duplicating the dataset before training caught 4 complaints leaking across train and test and 3 carrying contradictory labels",
+          "Pretrained DistilBERT supplies three-class sentiment; a transparent rules engine combines category, sentiment and an urgent-keyword list into Low, Medium, High or Urgent",
+          "Gemini drafts a suggested reply grounded in the complaint's own text and classification — always reviewed and edited by an agent, never sent to a customer by the model",
+          "Three independently deployable services with 227 tests across four suites, containerised with Docker and deployed to Kubernetes by a Jenkins pipeline"
+        ],
+        "tech": ["React","Vite","Node.js","Express","MongoDB","Mongoose","Python","FastAPI","scikit-learn","DistilBERT","Gemini","Docker","Kubernetes","Jenkins","Selenium"],
+        "links": { "github": "https://github.com/pavansai2608/complaint-classification-system" }
+      },
+      {
+        "id": "customer-segmentation-retention",
+        "station": "SEGMENT",
+        "images": [
+          { "src": "images/segmentation-retain.webp", "w": 1600, "h": 777, "alt": "Ranked retention list showing churn risk, predicted lifetime value and action per customer" },
+          { "src": "images/segmentation-score.webp", "w": 1600, "h": 909, "alt": "Live scoring form returning churn probability and a recommended action" },
+          { "src": "images/segmentation-lookup.webp", "w": 1600, "h": 909, "alt": "Customer lookup re-scoring an existing customer against the trained models" }
+        ],
+        "index": "04",
+        "name": "Customer Segmentation & Retention",
+        "category": "ML Pipeline / Analytics",
+        "metric": { "value": "540K+", "unit": "transactions", "caption": "229 high-value customers flagged" },
+        "bullets": [
+          "Processes 540K+ raw transactions into 391K validated records across 4,334 customers",
+          "Crosses BG/NBD + Gamma-Gamma lifetime value with XGBoost churn risk (0.78 ROC-AUC) into an action matrix",
+          "Flagged 229 high-value, high-risk customers worth £16.5K in predicted 90-day revenue",
+          "RFM features with K-Means segments give each customer a readable label, not an opaque score",
+          "MLflow experiment tracking and DVC data versioning, served via FastAPI backend and React dashboard"
+        ],
+        "tech": ["Python","XGBoost","Logistic Regression","K-Means","BG/NBD","Gamma-Gamma","SMOTE","FastAPI","React","MLflow","DVC"],
+        "links": { "github": "https://github.com/pavansai2608/customer-segmentation-retention.git", "demo": "https://customer-segmentation-retention-1-x35i.onrender.com/" }
+      },
+      {
+        "id": "msme-marketplace",
+        "station": "MARKET",
+        "images": [
+          { "src": "images/msme-recommendations.webp", "w": 1600, "h": 1345, "alt": "Product page from the seeded demo catalogue: price, seller and add-to-bag controls above a 'You may also like' rail of recommended products; the demo data uses placeholder photos" },
+          { "src": "images/msme-seller-dashboard.webp", "w": 1600, "h": 830, "alt": "Seller Hub inventory table listing a manufacturer's products with price, active status and stock by size" },
+          { "src": "images/msme-checkout.webp", "w": 1600, "h": 777, "alt": "Shopping bag with two textile items and an order summary totalling 9,918 rupees, with free shipping and a Checkout Now button" },
+          { "src": "images/msme-order-history.webp", "w": 1600, "h": 886, "alt": "Purchase history for a delivered order: two line items, a 16,586 rupee total and a shipment tracker from ordered to delivered" }
+        ],
+        "index": "05",
+        "name": "MSME Marketplace — Recommendation Engine & Code Audit",
+        "category": "Full-stack / Recommender",
+        "metric": { "value": "133", "unit": "tests added", "caption": "From zero coverage to three suites" },
+        "description": "An e-commerce platform for small Indian manufacturers. I inherited a four-person codebase, audited it end to end, and replaced a fabricated recommendation feature with a real one.",
+        "bullets": [
+          "Built a hybrid recommendation service as its own FastAPI process — TF-IDF content similarity blended 0.6/0.4 with co-purchase collaborative filtering, with explicit cold-start handling",
+          "Replaced a feature advertised in the UI as \u201cXGBoost-driven forecasting\u201d that was in fact a hardcoded constant",
+          "Audited the inherited codebase end to end and fixed the access-control and data-exposure bugs it surfaced, including a path that let any logged-in user escalate their own role",
+          "Rebuilt authentication on httpOnly cookies with 15-minute access tokens and refresh-token rotation",
+          "Took the project from zero tests to 133 across three suites — Jest, pytest and Playwright",
+          "Containerised all three services as non-root images and deployed them on AWS k3s with automatic TLS for about $23/month"
+        ],
+        "tech": ["Python","FastAPI","scikit-learn","Node.js","Express","MongoDB","React","Docker","Kubernetes","Jenkins","AWS"],
+        "links": { "github": "https://github.com/pavansai2608/msme-marketplace", "demo": "https://msme.52-63-85-62.nip.io", "demoNote": "The demo runs on an AWS instance that is stopped when idle, so the link may not respond." }
+      }
+    ]
+  },
+  "stack": {
+    "heading": "Tech stack",
+    "kicker": "What I build with",
+    "groups": [
+      { "name": "Languages", "items": ["Python","TypeScript","JavaScript","Java","SQL"] },
+      { "name": "AI & ML", "items": ["RAG","LLM APIs (Gemini, Groq)","transformers / DistilBERT","XGBoost","LightGBM","K-Means","TF-IDF + logistic regression","time-series forecasting","model evaluation"] },
+      { "name": "Frameworks & Libraries", "items": ["scikit-learn","pandas","NumPy","LangGraph","LangChain","sentence-transformers","FastAPI","Express","React","Vite"] },
+      { "name": "Databases", "items": ["MongoDB","MySQL","ChromaDB (vector)"] },
+      { "name": "Testing", "items": ["pytest / unittest","Jest","Vitest","Selenium","Playwright"] },
+      { "name": "DevOps & Cloud", "items": ["Docker","Kubernetes","Jenkins","Git","AWS","GCP","MLflow","DVC"] }
+    ]
+  },
+  "contact": {
+    "heading": "Get in touch",
+    "kicker": "Open to internships",
+    "email": "golipavansaikrishna2608@gmail.com",
+    "emailCta": "Send an Email",
+    "links": [
+      { "label": "GitHub", "handle": "github.com/pavansai2608", "href": "https://github.com/pavansai2608", "icon": "github", "available": true },
+      { "label": "LinkedIn", "handle": "linkedin.com/in/pavan-sai-krishna-goli-b5a557291", "href": "https://www.linkedin.com/in/pavan-sai-krishna-goli-b5a557291/", "icon": "linkedin", "available": true }
+    ]
+  },
+  "footer": {
+    "note": "Built from scratch — HTML, Tailwind CSS, vanilla JS. No template.",
+    "copyright": "Goli Pavan Sai Krishna"
+  }
+}
+{
+  "meta": {
     "title": "Goli Pavan Sai Krishna — AI/ML Engineer",
     "description": "Final-year B.Tech CSE (Data Science) student building measured, production-grade AI systems — agentic RAG, MLOps forecasting, and customer analytics.",
     "url": "https://example.com"
