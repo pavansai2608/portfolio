@@ -5,17 +5,37 @@
     "url": "https://portfolio-two-rho-1efh6kojg3.vercel.app"
   },
   "nav": [
-    { "label": "About", "href": "#about" },
-    { "label": "Work", "href": "#work" },
-    { "label": "Stack", "href": "#stack" },
-    { "label": "Contact", "href": "#contact" }
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Work",
+      "href": "#work"
+    },
+    {
+      "label": "Stack",
+      "href": "#stack"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
   ],
   "hero": {
     "name": "Goli Pavan Sai Krishna",
     "tagline": "Building AI and ML systems end to end — agentic RAG, forecasting, applied ML, and the full-stack services that ship them.",
     "ctas": [
-      { "label": "View my work", "href": "#work", "style": "primary" },
-      { "label": "Get in touch", "href": "#contact", "style": "ghost" }
+      {
+        "label": "View my work",
+        "href": "#work",
+        "style": "primary"
+      },
+      {
+        "label": "Get in touch",
+        "href": "#contact",
+        "style": "ghost"
+      }
     ]
   },
   "about": {
@@ -31,11 +51,26 @@
       "year": "4th year",
       "cgpa": "6.22",
       "rows": [
-        { "key": "Degree", "value": "B.Tech CSE (Data Science)" },
-        { "key": "Institution", "value": "NIIT University" },
-        { "key": "Duration", "value": "2023 — 2027" },
-        { "key": "Current year", "value": "4th year" },
-        { "key": "CGPA", "value": "6.22" }
+        {
+          "key": "Degree",
+          "value": "B.Tech CSE (Data Science)"
+        },
+        {
+          "key": "Institution",
+          "value": "NIIT University"
+        },
+        {
+          "key": "Duration",
+          "value": "2023 — 2027"
+        },
+        {
+          "key": "Current year",
+          "value": "4th year"
+        },
+        {
+          "key": "CGPA",
+          "value": "6.22"
+        }
       ]
     }
   },
@@ -48,15 +83,39 @@
         "id": "bill-auditor",
         "station": "RAG",
         "images": [
-          { "src": "images/bill-auditor-audit.webp", "w": 1600, "h": 909, "alt": "Bill Auditor audit summary: payable, deducted and flagged totals for a hospital bill" },
-          { "src": "images/bill-auditor-lines.webp", "w": 1600, "h": 777, "alt": "Line-by-line deduction table, each row naming the policy clause behind it" },
-          { "src": "images/bill-auditor-input.webp", "w": 1600, "h": 909, "alt": "Audit input screen: the hospital bill on the left, the policy details on the right" },
-          { "src": "images/bill-auditor-hero.webp", "w": 1600, "h": 922, "alt": "Bill Auditor landing page" }
+          {
+            "src": "images/bill-auditor-audit.webp",
+            "w": 1600,
+            "h": 909,
+            "alt": "Bill Auditor audit summary: payable, deducted and flagged totals for a hospital bill"
+          },
+          {
+            "src": "images/bill-auditor-lines.webp",
+            "w": 1600,
+            "h": 777,
+            "alt": "Line-by-line deduction table, each row naming the policy clause behind it"
+          },
+          {
+            "src": "images/bill-auditor-input.webp",
+            "w": 1600,
+            "h": 909,
+            "alt": "Audit input screen: the hospital bill on the left, the policy details on the right"
+          },
+          {
+            "src": "images/bill-auditor-hero.webp",
+            "w": 1600,
+            "h": 922,
+            "alt": "Bill Auditor landing page"
+          }
         ],
         "index": "01",
         "name": "Bill Auditor",
         "category": "Agentic RAG",
-        "metric": { "value": "492", "unit": "passing tests", "caption": "Zero fabricated clause citations" },
+        "metric": {
+          "value": "492",
+          "unit": "passing tests",
+          "caption": "Zero fabricated clause citations"
+        },
         "description": "Insurers deduct from a hospital bill without saying which clause allowed it. This reads the bill against the policy line by line and names the clause behind every rupee removed.",
         "bullets": [
           "Zero fabricated clause citations across all recorded evaluation versions",
@@ -64,20 +123,52 @@
           "LLM never performs arithmetic — all money math runs in Python, keeping every figure verifiable",
           "492 unit tests across an 8-stage Jenkins pipeline, deployed to Kubernetes"
         ],
-        "tech": ["Python","LangGraph","LangChain","FastAPI","ChromaDB","BM25","sentence-transformers","Groq","Ollama","React","TypeScript","Docker","Kubernetes","Jenkins"],
-        "links": { "github": "https://github.com/pavansai2608/bill-auditor.git", "demo": "https://pavansai2608.github.io/bill-auditor/" }
+        "tech": [
+          "Python",
+          "LangGraph",
+          "LangChain",
+          "FastAPI",
+          "ChromaDB",
+          "BM25",
+          "sentence-transformers",
+          "Groq",
+          "Ollama",
+          "React",
+          "TypeScript",
+          "Docker",
+          "Kubernetes",
+          "Jenkins"
+        ],
+        "links": {
+          "github": "https://github.com/pavansai2608/bill-auditor.git",
+          "demo": "https://pavansai2608.github.io/bill-auditor/"
+        }
       },
       {
         "id": "predictive-autoscaling",
         "station": "SCALE",
         "images": [
-          { "src": "images/autoscaling-overview.webp", "w": 1600, "h": 1000, "alt": "Benchmark overview reporting 62% lower p99 latency against the stock autoscaler" },
-          { "src": "images/autoscaling-replay.webp", "w": 1600, "h": 1000, "alt": "Benchmark replay view with a scrubber for stepping through a run second-by-second" }
+          {
+            "src": "images/autoscaling-overview.webp",
+            "w": 1600,
+            "h": 1000,
+            "alt": "Benchmark overview reporting 62% lower p99 latency against the stock autoscaler"
+          },
+          {
+            "src": "images/autoscaling-replay.webp",
+            "w": 1600,
+            "h": 1000,
+            "alt": "Benchmark replay view with a scrubber for stepping through a run second-by-second"
+          }
         ],
         "index": "02",
         "name": "Predictive Autoscaling for Kubernetes",
         "category": "MLOps / Forecasting",
-        "metric": { "value": "62%", "unit": "lower p99 latency", "caption": "Three runs per arm, identical traffic" },
+        "metric": {
+          "value": "62%",
+          "unit": "lower p99 latency",
+          "caption": "Three runs per arm, identical traffic"
+        },
         "description": "Kubernetes adds pods only after CPU has already climbed, so every traffic ramp is served short while new pods boot. This forecasts the load and scales before it arrives.",
         "bullets": [
           "Cut p99 latency 62% (479 → 183 ms) against the stock autoscaler — three runs per arm, identical traffic, for 28% more compute",
@@ -85,17 +176,58 @@
           "On a spike it cannot anticipate, forecasting alone was 40% worse — raising the autoscaler's floor instead came in 49% better",
           "Safety checks declined to act on 23% of 980 logged decisions where the forecast wasn't trustworthy"
         ],
-        "tech": ["Python","Kubernetes","Prometheus","k6","Docker","FastAPI","Next.js","Vercel"],
-        "links": { "github": "https://github.com/pavansai2608/predictive-autoscaling.git", "demo": "https://predictive-autoscaling.vercel.app" }
+        "tech": [
+          "Python",
+          "Kubernetes",
+          "Prometheus",
+          "k6",
+          "Docker",
+          "FastAPI",
+          "Next.js",
+          "Vercel"
+        ],
+        "links": {
+          "github": "https://github.com/pavansai2608/predictive-autoscaling.git",
+          "demo": "https://predictive-autoscaling.vercel.app"
+        }
       },
       {
         "id": "complaint-classification",
         "station": "TRIAGE",
-        "images": [],
+        "images": [
+          {
+            "src": "images/complaint-analysis.webp",
+            "w": 1600,
+            "h": 1000,
+            "alt": "A complaint after the pipeline has read it: category, AI emotion with its confidence score, the keyword that forced the Urgent priority, and the AI-drafted reply beside the version a person actually sent"
+          },
+          {
+            "src": "images/complaint-queue.webp",
+            "w": 1600,
+            "h": 449,
+            "alt": "The support queue ordered by urgency rather than arrival time, each row carrying its category and priority"
+          },
+          {
+            "src": "images/complaint-hero.webp",
+            "w": 1600,
+            "h": 900,
+            "alt": "Complaint Triage System landing page"
+          },
+          {
+            "src": "images/complaint-steps.webp",
+            "w": 1600,
+            "h": 900,
+            "alt": "How it works: describe the problem, it is sorted automatically, a person replies"
+          }
+        ],
         "index": "03",
         "name": "Complaint Triage System",
         "category": "Applied ML / Full-stack",
-        "metric": { "value": "79%", "unit": "classifier accuracy", "caption": "78.8% exact, 0.79 macro-F1 on a held-out set" },
+        "metric": {
+          "value": "79%",
+          "unit": "classifier accuracy",
+          "caption": "78.8% exact, 0.79 macro-F1 on a held-out set"
+        },
         "description": "Support teams read every complaint before they know which one is urgent. This scores each one the moment it arrives, so the queue is sorted by urgency instead of arrival time.",
         "bullets": [
           "Classifier reaches 78.8% accuracy and 0.79 macro-F1 on a held-out test set, and defers low-confidence cases to a human",
@@ -103,21 +235,59 @@
           "Gemini drafts the reply, grounded in the complaint's own text; an agent edits it before anything is sent",
           "Three services, 227 tests across four suites, containerised and deployed to Kubernetes by a Jenkins pipeline"
         ],
-        "tech": ["React","Vite","Node.js","Express","MongoDB","Python","FastAPI","scikit-learn","DistilBERT","Gemini","Docker","Kubernetes","Jenkins","Selenium"],
-        "links": { "github": "https://github.com/pavansai2608/complaint-classification-system" }
+        "tech": [
+          "React",
+          "Vite",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Python",
+          "FastAPI",
+          "scikit-learn",
+          "DistilBERT",
+          "Gemini",
+          "Docker",
+          "Kubernetes",
+          "Jenkins",
+          "Selenium"
+        ],
+        "links": {
+          "github": "https://github.com/pavansai2608/complaint-classification-system",
+          "demo": "https://3-105-252-57.sslip.io",
+          "demoNote": "The live example needs no account — it shows a real complaint after the pipeline has classified it."
+        }
       },
       {
         "id": "customer-segmentation-retention",
         "station": "SEGMENT",
         "images": [
-          { "src": "images/segmentation-retain.webp", "w": 1600, "h": 777, "alt": "Ranked retention list showing churn risk, predicted lifetime value and action per customer" },
-          { "src": "images/segmentation-score.webp", "w": 1600, "h": 909, "alt": "Live scoring form returning churn probability and a recommended action" },
-          { "src": "images/segmentation-lookup.webp", "w": 1600, "h": 909, "alt": "Customer lookup re-scoring an existing customer against the trained models" }
+          {
+            "src": "images/segmentation-retain.webp",
+            "w": 1600,
+            "h": 777,
+            "alt": "Ranked retention list showing churn risk, predicted lifetime value and action per customer"
+          },
+          {
+            "src": "images/segmentation-score.webp",
+            "w": 1600,
+            "h": 909,
+            "alt": "Live scoring form returning churn probability and a recommended action"
+          },
+          {
+            "src": "images/segmentation-lookup.webp",
+            "w": 1600,
+            "h": 909,
+            "alt": "Customer lookup re-scoring an existing customer against the trained models"
+          }
         ],
         "index": "04",
         "name": "Customer Segmentation & Retention",
         "category": "ML Pipeline / Analytics",
-        "metric": { "value": "540K+", "unit": "transactions", "caption": "229 high-value customers flagged" },
+        "metric": {
+          "value": "540K+",
+          "unit": "transactions",
+          "caption": "229 high-value customers flagged"
+        },
         "description": "Retention budget gets spread evenly across customers, including the ones who were never going to leave. This ranks who is actually worth keeping, and who isn't.",
         "bullets": [
           "Processes 540K+ raw transactions into 391K validated records across 4,334 customers",
@@ -125,31 +295,83 @@
           "Flagged 229 high-value, high-risk customers worth £16.5K in predicted 90-day revenue",
           "MLflow experiment tracking and DVC data versioning, served via FastAPI and a React dashboard"
         ],
-        "tech": ["Python","XGBoost","BG/NBD","Gamma-Gamma","SMOTE","FastAPI","React","MLflow","DVC"],
-        "links": { "github": "https://github.com/pavansai2608/customer-segmentation-retention.git", "demo": "https://customer-segmentation-retention-1-x35i.onrender.com/" }
+        "tech": [
+          "Python",
+          "XGBoost",
+          "BG/NBD",
+          "Gamma-Gamma",
+          "SMOTE",
+          "FastAPI",
+          "React",
+          "MLflow",
+          "DVC"
+        ],
+        "links": {
+          "github": "https://github.com/pavansai2608/customer-segmentation-retention.git",
+          "demo": "https://customer-segmentation-retention-1-x35i.onrender.com/"
+        }
       },
       {
         "id": "msme-marketplace",
         "station": "MARKET",
         "images": [
-          { "src": "images/msme-recommendations.webp", "w": 1600, "h": 1345, "alt": "Product page from the seeded demo catalogue with a 'You may also like' rail of recommended products" },
-          { "src": "images/msme-seller-dashboard.webp", "w": 1600, "h": 830, "alt": "Seller Hub inventory table listing a manufacturer's products with price, active status and stock by size" },
-          { "src": "images/msme-checkout.webp", "w": 1600, "h": 777, "alt": "Shopping bag with two textile items and an order summary, with free shipping and a Checkout Now button" },
-          { "src": "images/msme-order-history.webp", "w": 1600, "h": 886, "alt": "Purchase history for a delivered order with a shipment tracker from ordered to delivered" }
+          {
+            "src": "images/msme-recommendations.webp",
+            "w": 1600,
+            "h": 1345,
+            "alt": "Product page from the seeded demo catalogue with a 'You may also like' rail of recommended products"
+          },
+          {
+            "src": "images/msme-seller-dashboard.webp",
+            "w": 1600,
+            "h": 830,
+            "alt": "Seller Hub inventory table listing a manufacturer's products with price, active status and stock by size"
+          },
+          {
+            "src": "images/msme-checkout.webp",
+            "w": 1600,
+            "h": 777,
+            "alt": "Shopping bag with two textile items and an order summary, with free shipping and a Checkout Now button"
+          },
+          {
+            "src": "images/msme-order-history.webp",
+            "w": 1600,
+            "h": 886,
+            "alt": "Purchase history for a delivered order with a shipment tracker from ordered to delivered"
+          }
         ],
         "index": "05",
         "name": "MSME Marketplace",
         "category": "Full-stack / Recommender",
-        "metric": { "value": "133", "unit": "tests added", "caption": "From zero coverage to three suites" },
-        "description": "An inherited marketplace shipped a recommendation feature that was a hardcoded constant. I audited the codebase and built the real one.",
+        "metric": {
+          "value": "133",
+          "unit": "tests added",
+          "caption": "From zero coverage to three suites"
+        },
+        "description": "An inherited marketplace shipped a recommendation feature that was a hardcoded constant. I audited the code and built the real one.",
         "bullets": [
-          "Hybrid recommender as its own FastAPI service — content similarity blended 0.6/0.4 with co-purchase filtering",
-          "Fixed the access-control and data-exposure bugs the audit surfaced, including a path to self-escalate a role",
-          "Rebuilt authentication on httpOnly cookies with 15-minute access tokens and refresh-token rotation",
-          "From zero tests to 133, with three services deployed on AWS k3s under automatic TLS"
+          "Hybrid recommender as its own FastAPI service — content similarity blended with co-purchase filtering",
+          "Rebuilt auth on httpOnly cookies with refresh-token rotation, and fixed the access-control bugs the audit found",
+          "From zero tests to 133; three services on AWS k3s with automatic TLS"
         ],
-        "tech": ["Python","FastAPI","scikit-learn","Node.js","Express","MongoDB","React","Docker","Kubernetes","Jenkins","AWS"],
-        "links": { "github": "https://github.com/pavansai2608/msme-marketplace", "demo": "https://msme.52-63-85-62.nip.io", "demoNote": "The demo runs on an AWS instance that is stopped when idle, so the link may not respond." }
+        "tech": [
+          "Python",
+          "FastAPI",
+          "scikit-learn",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "React",
+          "Docker",
+          "Kubernetes",
+          "Jenkins",
+          "AWS"
+        ],
+        "links": {
+          "github": "https://github.com/pavansai2608/msme-marketplace",
+          "demo": "https://msme.52-63-85-62.nip.io",
+          "demoNote": "The demo runs on an AWS instance that is stopped when idle, so the link may not respond."
+        }
       }
     ]
   },
@@ -157,12 +379,73 @@
     "heading": "Tech stack",
     "kicker": "What I build with",
     "groups": [
-      { "name": "Languages", "items": ["Python","TypeScript","JavaScript","Java","SQL"] },
-      { "name": "AI & ML", "items": ["RAG","LLM APIs (Gemini, Groq)","transformers / DistilBERT","XGBoost","time-series forecasting","model evaluation"] },
-      { "name": "Frameworks & Libraries", "items": ["scikit-learn","pandas","NumPy","LangGraph","LangChain","sentence-transformers","FastAPI","Express","React","Vite"] },
-      { "name": "Databases", "items": ["MongoDB","MySQL","ChromaDB (vector)"] },
-      { "name": "Testing", "items": ["pytest / unittest","Jest","Vitest","Selenium","Playwright"] },
-      { "name": "DevOps & Cloud", "items": ["Docker","Kubernetes","Jenkins","Git","AWS","GCP","MLflow","DVC"] }
+      {
+        "name": "Languages",
+        "items": [
+          "Python",
+          "TypeScript",
+          "JavaScript",
+          "Java",
+          "SQL"
+        ]
+      },
+      {
+        "name": "AI & ML",
+        "items": [
+          "RAG",
+          "LLM APIs (Gemini, Groq)",
+          "transformers / DistilBERT",
+          "XGBoost",
+          "time-series forecasting",
+          "model evaluation"
+        ]
+      },
+      {
+        "name": "Frameworks & Libraries",
+        "items": [
+          "scikit-learn",
+          "pandas",
+          "NumPy",
+          "LangGraph",
+          "LangChain",
+          "sentence-transformers",
+          "FastAPI",
+          "Express",
+          "React",
+          "Vite"
+        ]
+      },
+      {
+        "name": "Databases",
+        "items": [
+          "MongoDB",
+          "MySQL",
+          "ChromaDB (vector)"
+        ]
+      },
+      {
+        "name": "Testing",
+        "items": [
+          "pytest / unittest",
+          "Jest",
+          "Vitest",
+          "Selenium",
+          "Playwright"
+        ]
+      },
+      {
+        "name": "DevOps & Cloud",
+        "items": [
+          "Docker",
+          "Kubernetes",
+          "Jenkins",
+          "Git",
+          "AWS",
+          "GCP",
+          "MLflow",
+          "DVC"
+        ]
+      }
     ]
   },
   "contact": {
@@ -171,8 +454,20 @@
     "email": "golipavansaikrishna2608@gmail.com",
     "emailCta": "Send an Email",
     "links": [
-      { "label": "GitHub", "handle": "github.com/pavansai2608", "href": "https://github.com/pavansai2608", "icon": "github", "available": true },
-      { "label": "LinkedIn", "handle": "linkedin.com/in/pavan-sai-krishna-goli-b5a557291", "href": "https://www.linkedin.com/in/pavan-sai-krishna-goli-b5a557291/", "icon": "linkedin", "available": true }
+      {
+        "label": "GitHub",
+        "handle": "github.com/pavansai2608",
+        "href": "https://github.com/pavansai2608",
+        "icon": "github",
+        "available": true
+      },
+      {
+        "label": "LinkedIn",
+        "handle": "linkedin.com/in/pavan-sai-krishna-goli-b5a557291",
+        "href": "https://www.linkedin.com/in/pavan-sai-krishna-goli-b5a557291/",
+        "icon": "linkedin",
+        "available": true
+      }
     ]
   },
   "footer": {
