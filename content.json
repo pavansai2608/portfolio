@@ -369,8 +369,7 @@
         ],
         "links": {
           "github": "https://github.com/pavansai2608/msme-marketplace",
-          "demo": "https://msme.52-63-85-62.nip.io",
-          "demoNote": "The demo runs on an AWS instance that is stopped when idle, so the link may not respond."
+          "demo": "https://msme.52-63-85-62.nip.io"
         }
       }
     ]
