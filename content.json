@@ -41,7 +41,7 @@
   "about": {
     "heading": "About",
     "kicker": "The short version",
-    "bio": "I'm a final-year B.Tech CSE (Data Science) student at NIIT University, building end-to-end AI and ML systems rather than notebooks — an agentic RAG pipeline that audits insurance bills clause-by-clause with zero fabricated citations, a Kubernetes autoscaler that forecasts traffic and beats the stock autoscaler by 62% (and honestly reports where it didn't), a support platform that classifies every incoming complaint and routes it by urgency, a customer analytics pipeline that turns raw transactions into ranked retention decisions, and a hybrid recommender built to replace a feature that turned out to be a hardcoded constant. I care most about systems that measure their own claims instead of asserting them.",
+    "bio": "I'm a final-year B.Tech CSE (Data Science) student at NIIT University who likes building complete systems, not notebooks. My work moves between reading documents and support messages, predicting demand before it hits, and turning raw transaction data into decisions a team can actually act on — across health insurance audits, cloud infrastructure, customer support, retail analytics, and e-commerce. What ties it together is a habit of measuring whether a system really works, rather than just claiming it does.",
     "education": {
       "label": "Education",
       "degree": "B.Tech, Computer Science & Engineering",
