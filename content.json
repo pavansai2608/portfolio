@@ -41,7 +41,7 @@
   "about": {
     "heading": "About",
     "kicker": "The short version",
-    "bio": "I'm a final-year B.Tech CSE (Data Science) student at NIIT University. Recently that's meant reading insurance bills clause by clause to catch wrongful deductions, teaching a Kubernetes cluster to scale before a traffic spike instead of after it, sorting support complaints by urgency the moment they land, ranking which customers are actually worth retaining from a retailer's transaction history, and rebuilding a marketplace's recommendation engine after finding out the old one was a hardcoded constant. What ties it together: each of these reports its own accuracy — 62% faster under load, zero fabricated citations, real macro-F1 scores — instead of asking you to take my word for it.",
+    "bio": "I'm a final-year B.Tech CSE (Data Science) student at NIIT University with hands-on experience building AI and ML systems and the backend services around them, end to end — from forecasting and classification models to the infrastructure that deploys them. That's meant reading insurance bills clause by clause to catch wrongful deductions, teaching a Kubernetes cluster to scale before a traffic spike instead of after it, sorting support complaints by urgency the moment they land, ranking which customers are actually worth retaining from a retailer's transaction history, and rebuilding a marketplace's recommendation engine after finding out the old one was a hardcoded constant. What ties it together: each of these reports its own accuracy — 62% faster under load, zero fabricated citations, real macro-F1 scores — instead of asking you to take my word for it.",
     "education": {
       "label": "Education",
       "degree": "B.Tech, Computer Science & Engineering",
