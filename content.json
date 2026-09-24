@@ -41,7 +41,7 @@
   "about": {
     "heading": "About",
     "kicker": "The short version",
-    "bio": "I'm a final-year B.Tech CSE (Data Science) student at NIIT University who likes building complete systems, not notebooks. My work moves between reading documents and support messages, predicting demand before it hits, and turning raw transaction data into decisions a team can actually act on — across health insurance audits, cloud infrastructure, customer support, retail analytics, and e-commerce. What ties it together is a habit of measuring whether a system really works, rather than just claiming it does.",
+    "bio": "I'm a final-year B.Tech CSE (Data Science) student at NIIT University, and I'd rather ship a working system than write about one in a notebook. Recently that's meant reading insurance bills clause by clause to catch wrongful deductions, teaching a Kubernetes cluster to scale before a traffic spike instead of after it, sorting support complaints by urgency the moment they land, ranking which customers are actually worth retaining from a retailer's transaction history, and rebuilding a marketplace's recommendation engine after finding out the old one was a hardcoded constant. What ties it together: each of these reports its own accuracy — 62% faster under load, zero fabricated citations, real macro-F1 scores — instead of asking you to take my word for it.",
     "education": {
       "label": "Education",
       "degree": "B.Tech, Computer Science & Engineering",
