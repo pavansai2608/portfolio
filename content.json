@@ -253,7 +253,7 @@
         ],
         "links": {
           "github": "https://github.com/pavansai2608/complaint-classification-system",
-          "demo": "https://3-105-252-57.sslip.io",
+          "demo": "https://3-105-252-57.nip.io",
           "demoNote": "The live example needs no account — it shows a real complaint after the pipeline has classified it."
         }
       },
